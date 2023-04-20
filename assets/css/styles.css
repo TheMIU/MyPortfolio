@@ -69,3 +69,30 @@ header menu li a {
     width: 100%;
 }
 
+/* work section styles
+============================================ */
+section{
+    border: solid red 2px;
+    position: relative;
+}
+
+section> section {
+    border: solid green 2px;
+}
+
+section>article{
+    border: solid blue 2px;
+}
+
+.sidePara{
+    position: absolute;
+    /*float: right; width: 80%;*/
+}
+
+aside{
+    border: solid deeppink 2px;
+    display: inline-block;
+}
+
+
+
