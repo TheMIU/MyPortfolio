@@ -9,11 +9,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 5px;
     background-color: #E7F0ED;
     color: #14192B;
-    /*position: fixed;*/
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -38,12 +36,12 @@ header menu li a {
 
 /* normal state */
 .hoverText {
-    font-size: 16px;
+    font-weight: normal;
 }
 
 /* hover state */
 .hoverText:hover {
-    font-size: 17px;
+    font-weight: bold;
 }
 
 /* Underline Text */
@@ -71,27 +69,25 @@ header menu li a {
 
 /* work section styles
 ============================================ */
-section{
-    border: solid red 2px;
-    position: relative;
+
+#back-to-top {
+    position: fixed;
+    background-color: #c9d0cc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    bottom: 20px;
+    right: 20px;
 }
 
-section> section {
-    border: solid green 2px;
-}
-
-section>article{
-    border: solid blue 2px;
-}
-
-.sidePara{
-    position: absolute;
-    /*float: right; width: 80%;*/
-}
-
-aside{
-    border: solid deeppink 2px;
-    display: inline-block;
+#back-to-top > a{
+    text-decoration: none;
+    color: white;
 }
 
 
