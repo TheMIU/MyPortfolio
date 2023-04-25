@@ -96,17 +96,41 @@ header menu li a {
     color: white;
 }
 
-/* Main > sections
+/* main > sections
 ============================================ */
 main > section{
     width: 100%;
-}
-
-main > section:nth-child(1){
-    /*background-color: #fd4040;*/
-    height: 85vh;
     position: relative;
 }
+
+/*intro*/
+main > section:nth-child(1){
+    /*background-color: #a8fd40;*/
+    height: 85vh;
+}
+/*work*/
+main > section:nth-child(2){
+   /* background-color: #fd4040;*/
+}
+
+/*other*/
+main > section:nth-child(3){
+   /* background-color: #ffbb00;*/
+    height: 100vh;
+}
+
+/*more*/
+main > section:nth-child(4){
+   /* background-color: #333960;*/
+}
+
+/*contact*/
+main > section:nth-child(5){
+   /* background-color: #7b97ff;*/
+    height: 100vh;
+}
+
+
 main > section:nth-child(1)>img{
     position: absolute;
     bottom: 0;
@@ -114,4 +138,44 @@ main > section:nth-child(1)>img{
     right: 0;
     margin: auto;
     width: 100%;
+}
+
+/* Main > section > h1 (main titles)
+============================================ */
+.heading_text{
+    background-color: #14192b;
+    position: sticky;
+    top: 0px;
+    height: 80px;
+}
+
+.heading_text > h1{
+    color: white;
+    font-weight: normal;
+    left: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #14192b;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+.heading_text > div{
+    background-color: #43586c;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+menu,ul{
+    margin-bottom: 0px;
+}
+
+section > article{
+    padding-top: 20px;
 }
