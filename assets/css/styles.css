@@ -6,6 +6,7 @@
 /* Header styles
 ============================================ */
 header {
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,6 +18,12 @@ header {
     right: 0;
 }
 
+header>a>img{
+    padding-left : 20px;
+}
+header>nav{
+    padding-right : 20px;
+}
 header menu {
     display: flex;
     list-style: none;
@@ -67,9 +74,8 @@ header menu li a {
     width: 100%;
 }
 
-/* work section styles
+/* back-to-top
 ============================================ */
-
 #back-to-top {
     position: fixed;
     background-color: #c9d0cc;
@@ -90,5 +96,22 @@ header menu li a {
     color: white;
 }
 
+/* Main > sections
+============================================ */
+main > section{
+    width: 100%;
+}
 
-
+main > section:nth-child(1){
+    /*background-color: #fd4040;*/
+    height: 85vh;
+    position: relative;
+}
+main > section:nth-child(1)>img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+}
