@@ -18,12 +18,22 @@ header {
     right: 0;
 }
 
-header>a>img{
-    padding-left : 20px;
+header > a > img {
+    padding-left: 20px;
 }
-header>nav{
-    padding-right : 20px;
+
+header > a > img {
+    transition: all 0.2s ease;
 }
+
+header > a > img:hover {
+    transform: scale(1.2);
+}
+
+header > nav {
+    padding-right: 20px;
+}
+
 header menu {
     display: flex;
     list-style: none;
@@ -36,7 +46,7 @@ header menu li {
 }
 
 header menu li a {
-    color: #14192B;
+    color: #14192b;
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -44,11 +54,13 @@ header menu li a {
 /* normal state */
 .hoverText {
     font-weight: normal;
+    transition: all 0.2s ease-in-out;
 }
 
 /* hover state */
 .hoverText:hover {
     font-weight: bold;
+    transform: scale(1.2);
 }
 
 /* Underline Text */
@@ -78,7 +90,7 @@ header menu li a {
 ============================================ */
 #back-to-top {
     position: fixed;
-    background-color: #c9d0cc;
+    background-color: rgba(20, 25, 43, 0.5);
 
     display: flex;
     justify-content: center;
@@ -89,49 +101,65 @@ header menu li a {
     border-radius: 100%;
     bottom: 20px;
     right: 20px;
+
+    transition: all 0.2s ease-in-out;
 }
 
-#back-to-top > a{
+#back-to-top:hover {
+    background-color: #14192b;
+    transform: scale(1.2);
+}
+
+#back-to-top > a {
     text-decoration: none;
     color: white;
+    transition: all 0.2s ease-in-out;
 }
+
+#back-to-top > a:hover {
+    transform: scale(1.2);
+}
+
+
+
 
 /* main > sections
 ============================================ */
-main > section{
+main > section {
     width: 100%;
     position: relative;
 }
 
 /*intro*/
-main > section:nth-child(1){
+main > section:nth-child(1) {
     /*background-color: #a8fd40;*/
     height: 85vh;
 }
+
 /*work*/
-main > section:nth-child(2){
-   /* background-color: #fd4040;*/
+main > section:nth-child(2) {
+    /* background-color: #fd4040;*/
 }
 
 /*other*/
-main > section:nth-child(3){
-   /* background-color: #ffbb00;*/
+main > section:nth-child(3) {
+    /* background-color: #ffbb00;*/
     height: 100vh;
 }
 
 /*more*/
-main > section:nth-child(4){
-   /* background-color: #333960;*/
+main > section:nth-child(4) {
+    /* background-color: #333960;*/
 }
 
 /*contact*/
-main > section:nth-child(5){
-   /* background-color: #7b97ff;*/
+main > section:nth-child(5) {
+    /* background-color: #7b97ff;*/
     height: 100vh;
 }
 
 
-main > section:nth-child(1)>img{
+main > section:nth-child(1) > img {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -142,14 +170,15 @@ main > section:nth-child(1)>img{
 
 /* Main > section > h1 (main titles)
 ============================================ */
-.heading_text{
+.heading_text {
     background-color: #14192b;
     position: sticky;
     top: 0px;
     height: 80px;
+    z-index: 1;
 }
 
-.heading_text > h1{
+.heading_text > h1 {
     color: white;
     font-weight: normal;
     left: 100px;
@@ -160,9 +189,10 @@ main > section:nth-child(1)>img{
     top: 30%;
     bottom: 0;
     margin: auto;
-    z-index: 1;
+    z-index: 2;
 }
-.heading_text > div{
+
+.heading_text > div {
     background-color: #43586c;
     height: 5px;
     width: 100%;
@@ -172,10 +202,95 @@ main > section:nth-child(1)>img{
     margin: auto;
 }
 
-menu,ul{
-    margin-bottom: 0px;
+/* work > 3 sections
+============================================ */
+#programming {
+    background-color: #fd4040;
+    padding-left: 50px;
+    padding-top: 30px;
 }
 
-section > article{
-    padding-top: 20px;
+#design {
+    background-color: #3164ff;
+    padding-left: 50px;
+    padding-top: 30px;
 }
+
+/* Work > Games >
+============================================ */
+#games > article:nth-child(1) {
+    position: relative;
+    display: flex;
+}
+
+#games > article:nth-child(1) > aside:nth-child(1) {
+    background-color: rgb(231, 240, 237);
+    width: 100px;
+
+}
+
+#games > article:nth-child(1) > aside:nth-child(2) {
+    width: 20%;
+    position: relative;
+}
+
+#games > article:nth-child(1) > aside:nth-child(3) {
+    width: 80%;
+    position: relative;
+}
+
+#games > article:nth-child(1) > aside:nth-child(2) > img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#games > article:nth-child(2) {
+    background-color: #a8fd40;
+}
+
+/*
+============================================ */
+#icon_set menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#icon_set > menu {
+    background-color: #fd4040;
+    width: 50%;
+}
+
+#icon_set menu a img {
+    vertical-align: middle;
+}
+
+#icon_set menu a img {
+    width: 60%;
+    transition: all 0.2s ease-in-out;
+}
+
+#icon_set menu a img:hover {
+    transform: scale(1.2);
+}
+
+
+/*
+============================================ */
+/*p{
+    padding-left: 50px;
+    padding-right: 50px;
+}*/
+
+/*menu,ul{
+    margin-bottom: 0px;
+}*/
+
