@@ -237,6 +237,10 @@ main > section:nth-child(1) > img {
 #games > article:nth-child(1) > aside:nth-child(3) {
     width: 80%;
     position: relative;
+    top: 20px;
+    padding-right: 50px;
+    padding-left: 25px;
+    padding-bottom: 20px;
 }
 
 #games > article:nth-child(1) > aside:nth-child(2) > img {
@@ -293,4 +297,27 @@ main > section:nth-child(1) > img {
 /*menu,ul{
     margin-bottom: 0px;
 }*/
+
+/* Button styles
+============================================ */
+.button-style {
+    display: inline-block;
+    padding: 8px 20px 3px 20px;
+    background-color: #fecb02;
+    color: #14192b;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 0px rgb(255, 128, 0);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.button-style:hover {
+    background-color: #cba414;
+}
+
+/*
+============================================ */
 
