@@ -286,18 +286,6 @@ main > section:nth-child(1) > img {
     transform: scale(1.2);
 }
 
-
-/*
-============================================ */
-/*p{
-    padding-left: 50px;
-    padding-right: 50px;
-}*/
-
-/*menu,ul{
-    margin-bottom: 0px;
-}*/
-
 /* Button styles
 ============================================ */
 .button-style {
@@ -315,9 +303,47 @@ main > section:nth-child(1) > img {
 }
 
 .button-style:hover {
-    background-color: #cba414;
+    background-color: #e7b609;
+}
+
+/* sub_heading
+============================================ */
+.sub_heading{
+    display:flex;
+    position: relative;
+    height: 30px;
+    width: 180px;
+    background-color: #14192B;
+}
+
+.sub_heading > div{
+    width: 30px;
+    height: 40px;
+    border-left: #e77809 solid 5px ;
+    background-color: #ffbb00;
+    margin-top: -5px;
+}
+
+.sub_heading > h3{
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px 10px 10px 15px;
+    left: 100px;
 }
 
 /*
 ============================================ */
+/*p{
+    padding-left: 50px;
+    padding-right: 50px;
+}*/
 
+/*menu,ul{
+    margin-bottom: 0px;
+}*/
+
+dfn{
+    font-style: normal;
+    font-weight: bold;
+}
