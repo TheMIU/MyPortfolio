@@ -89,6 +89,7 @@ header menu li a {
 /* back-to-top
 ============================================ */
 #back-to-top {
+    z-index: 10;
     position: fixed;
     background-color: rgba(20, 25, 43, 0.5);
 
@@ -99,6 +100,7 @@ header menu li a {
     width: 50px;
     height: 50px;
     border-radius: 100%;
+    border: rgba(255, 255, 255, 0.5) solid 2px;
     bottom: 20px;
     right: 20px;
 
@@ -119,8 +121,6 @@ header menu li a {
 #back-to-top > a:hover {
     transform: scale(1.2);
 }
-
-
 
 
 /* main > sections
@@ -168,7 +168,7 @@ main > section:nth-child(1) > img {
     width: 100%;
 }
 
-/* Main > section > h1 (main titles)
+/* heading_text
 ============================================ */
 .heading_text {
     background-color: #14192b;
@@ -251,78 +251,36 @@ main > section:nth-child(1) > img {
     top: 0;
     bottom: 0;
     left: 0;
+    right: 0;
     margin: auto;
 }
 
-#games > article:nth-child(2) {
-    background-color: #a8fd40;
+#games > article:nth-child(2) > section:nth-child(2) {
+    background-color: #e7f0ed;
 }
 
-/*
+/* icon set
 ============================================ */
-/*#icon_set_and_button{
-    background-color: #fd4040;
-    display: flex;
-    height: 30px;
-}
-#icon_set{
-    background-color: rgba(255, 187, 0, 0.8);
-    display: inline-block;
-    position: relative;
-}
-
-#icon_set h4{
-    font-style: normal;
-    font-weight: bold;
-    color: #14192B;
-}
-
-#icon_set div{
-    background-color: rgba(80, 7, 175, 0.42);
-    width: 500px;
-}
-
-
-#icon_set menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding-left: 0px;
-}
-
-#icon_set menu a img {
-    vertical-align: middle;
-}
-
-#icon_set menu a img {
-    width: 60%;
-    transition: all 0.2s ease-in-out;
-}
-
-#icon_set menu a img:hover {
-    transform: scale(1.2);
-}*/
-
-#icon_set_and_button {
+.icon_set_and_button {
     display: flex;
     align-items: center;
 }
 
-#icon_set {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-#icon_set_and_button h4 {
+.icon_set_and_button h4 {
     padding-left: 20px;
     margin: 0;
     font-weight: bold;
     color: #14192B;
 }
 
-#icon_set menu {
+/* icon set */
+.icon_set {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon_set menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,19 +289,80 @@ main > section:nth-child(1) > img {
     padding: 0;
 }
 
-#icon_set menu li {
+.icon_set menu li {
     margin-right: 10px;
 }
 
-#icon_set menu a img {
+.icon_set menu a img {
     vertical-align: middle;
     width: 30px;
     transition: all 0.2s ease-in-out;
 }
 
-#icon_set menu a img:hover {
+.icon_set menu a img:hover {
     transform: scale(1.2);
 }
+
+
+/* icon set 2 */
+/*.icon_set2 {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 100px;
+}
+
+.icon_set2 menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon_set2 menu li {
+    padding-right: -40px;
+}
+
+.icon_set2 menu a img {
+    vertical-align: middle;
+    width: 70%;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon_set2 menu a img:hover {
+    transform: scale(1.1);
+}*/
+.icon_set2 {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 100px;
+}
+
+.icon_set2 menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icon_set2 menu li {
+    margin: 0;
+}
+
+.icon_set2 menu a img {
+    vertical-align: middle;
+    width: 70%;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon_set2 menu a img:hover {
+    transform: scale(1.1);
+}
+
+
 
 /* Button styles
 ============================================ */
@@ -365,26 +384,55 @@ main > section:nth-child(1) > img {
     background-color: #e7b609;
 }
 
-/* sub_heading
+/* sub_heading 1
 ============================================ */
-.sub_heading{
-    display:flex;
+.sub_heading {
+    display: flex;
     position: relative;
     height: 30px;
     width: 180px;
     background-color: #14192B;
 }
 
-.sub_heading > div{
+.sub_heading > div {
     width: 30px;
     height: 40px;
-    border-left: #e77809 solid 5px ;
+    border-left: #e77809 solid 5px;
     background-color: #ffbb00;
     margin-top: -5px;
 }
 
-.sub_heading > h3{
+.sub_heading > h3 {
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px 10px 10px 15px;
+    left: 100px;
+}
+
+/* sub_heading 2
+============================================ */
+.sub_heading2 {
+    display: flex;
+    position: relative;
+    height: 30px;
+    width: 180px;
+
+    left: 80px;
+    top: auto;
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+
+.sub_heading2 > div {
+    width: 20px;
+    height: 30px;
+    border-left: #e77809 solid 5px;
+    background-color: #ffbb00;
+}
+
+.sub_heading2 > h3 {
+    color: #14192B;
     padding-left: 10px;
     padding-right: 10px;
     margin: 5px 10px 10px 15px;
@@ -393,15 +441,25 @@ main > section:nth-child(1) > img {
 
 /*
 ============================================ */
-p{
-    margin-top: 25px;
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /*menu,ul{
     margin-bottom: 0px;
 }*/
 
-dfn{
+dfn {
     font-style: normal;
     font-weight: bold;
+}
+
+.paragraphs {
+    background-color: #e7f0ed;
+    border-left: #e7f0ed solid 20px;
+    border-top: #e7f0ed solid 5px;
+    border-bottom: #e7f0ed solid 5px;
+    border-right: #e7f0ed solid 5px;
+    margin-top: 15px;
 }
