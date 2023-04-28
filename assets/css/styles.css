@@ -205,7 +205,6 @@ main > section:nth-child(1) > img {
 /* work > 3 sections
 ============================================ */
 #programming {
-    background-color: #fd4040;
     padding-left: 50px;
     padding-top: 30px;
 }
@@ -259,6 +258,48 @@ main > section:nth-child(1) > img {
     background-color: #e7f0ed;
 }
 
+/* Work > Programming >
+============================================ */
+#programming > article:nth-child(1) {
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+}
+
+#programming > article:nth-child(1) > aside:nth-child(1) {
+    background-color: rgb(231, 240, 237);
+    width: 100px;
+}
+
+#programming > article:nth-child(1) > aside:nth-child(2) {
+    width: 20%;
+    position: relative;
+}
+
+#programming > article:nth-child(1) > aside:nth-child(3) {
+    width: 80%;
+    position: relative;
+    top: 20px;
+    padding-right: 50px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+
+#programming > article:nth-child(1) > aside:nth-child(2) > img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#programming > article:nth-child(2) > section:nth-child(2) {
+    background-color: #e7f0ed;
+}
+
 /* icon set
 ============================================ */
 .icon_set_and_button {
@@ -303,36 +344,6 @@ main > section:nth-child(1) > img {
     transform: scale(1.2);
 }
 
-
-/* icon set 2 */
-/*.icon_set2 {
-    display: flex;
-    align-items: center;
-    padding: 20px 20px 20px 100px;
-}
-
-.icon_set2 menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.icon_set2 menu li {
-    padding-right: -40px;
-}
-
-.icon_set2 menu a img {
-    vertical-align: middle;
-    width: 70%;
-    transition: all 0.2s ease-in-out;
-}
-
-.icon_set2 menu a img:hover {
-    transform: scale(1.1);
-}*/
 .icon_set2 {
     display: flex;
     align-items: center;
