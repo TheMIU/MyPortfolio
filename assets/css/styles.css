@@ -363,7 +363,6 @@ main > section:nth-child(1) > img {
 }
 
 
-
 /* Button styles
 ============================================ */
 .button-style {
@@ -418,7 +417,7 @@ main > section:nth-child(1) > img {
     height: 30px;
     width: 180px;
 
-    left: 80px;
+    left: 85px;
     top: auto;
     padding-bottom: 10px;
     padding-top: 50px;
@@ -437,6 +436,18 @@ main > section:nth-child(1) > img {
     padding-right: 10px;
     margin: 5px 10px 10px 15px;
     left: 100px;
+}
+
+/*
+============================================ */
+.break {
+    background-color: #333960;
+    height: 10px;
+    border-bottom: #e7f0ed solid 5px;
+    width: 90%;
+    position: absolute;
+    left: 90px;
+    right: 0;
 }
 
 /*
@@ -463,3 +474,4 @@ dfn {
     border-right: #e7f0ed solid 5px;
     margin-top: 15px;
 }
+
