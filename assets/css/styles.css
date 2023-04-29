@@ -205,7 +205,6 @@ main > section:nth-child(1) > img {
 /* work > 3 sections
 ============================================ */
 #programming {
-    padding-left: 50px;
     padding-top: 30px;
 }
 
@@ -318,7 +317,6 @@ main > section:nth-child(1) > img {
 .icon_set {
     display: flex;
     align-items: center;
-    padding: 10px;
 }
 
 .icon_set menu {
@@ -400,7 +398,7 @@ main > section:nth-child(1) > img {
     display: flex;
     position: relative;
     height: 30px;
-    width: 180px;
+    width: 200px;
     background-color: #14192B;
 }
 
@@ -414,8 +412,6 @@ main > section:nth-child(1) > img {
 
 .sub_heading > h3 {
     color: white;
-    padding-left: 10px;
-    padding-right: 10px;
     margin: 5px 10px 10px 15px;
     left: 100px;
 }
@@ -443,8 +439,6 @@ main > section:nth-child(1) > img {
 
 .sub_heading2 > h3 {
     color: #14192B;
-    padding-left: 10px;
-    padding-right: 10px;
     margin: 5px 10px 10px 15px;
     left: 100px;
 }
@@ -464,8 +458,8 @@ main > section:nth-child(1) > img {
 /*
 ============================================ */
 p {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /*menu,ul{
@@ -477,6 +471,8 @@ dfn {
     font-weight: bold;
 }
 
+/* paragraphs
+============================================ */
 .paragraphs {
     background-color: #e7f0ed;
     border-left: #e7f0ed solid 20px;
@@ -484,5 +480,16 @@ dfn {
     border-bottom: #e7f0ed solid 5px;
     border-right: #e7f0ed solid 5px;
     margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Grayscale images hover
+============================================ */
+.img_gray {
+    filter: grayscale(1);
+}
+
+.img_gray:hover {
+    filter: none;
 }
 
