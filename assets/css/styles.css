@@ -299,6 +299,14 @@ main > section:nth-child(1) > img {
     background-color: #e7f0ed;
 }
 
+#programming > article:nth-child(3) > section:nth-child(3) {
+    background-color: #e7f0ed;
+}
+
+#programming > article:nth-child(3) > section:nth-child(5) {
+    background-color: #e7f0ed;
+}
+
 /* icon set
 ============================================ */
 .icon_set_and_button {
@@ -445,6 +453,37 @@ main > section:nth-child(1) > img {
 
 /*
 ============================================ */
+
+/* sub_heading 3
+============================================ */
+.sub_heading3 {
+    display: flex;
+    position: relative;
+    height: 30px;
+    width: 180px;
+
+    left: 110px;
+    top: 13px;
+}
+
+.sub_heading3 > div {
+    width: 10px;
+    height: 15px;
+    border: #e77809 solid 1px;
+    /*background-color: #ffbb00;*/
+}
+
+.sub_heading3 > h3 {
+    color: #14192B;
+    margin: 0px 10px 10px 15px;
+    left: 100px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+/*
+============================================ */
+
 .break {
     background-color: #333960;
     height: 10px;
@@ -493,3 +532,142 @@ dfn {
     filter: none;
 }
 
+
+/* Contact form
+============================================ */
+/* Target the Contact section */
+/*
+#contact {
+    background-color: #f7f7f7;
+    padding: 50px;
+}
+*/
+
+/* Target the heading text */
+/*#contact #heading_text {
+    margin-bottom: 30px;
+}*/
+/*
+!* Target the h1 element inside heading text *!
+#contact #heading_text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}*/
+
+/* Target the form */
+#contact #contact_form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Target the labels and inputs inside the form */
+#contact #contact_form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact #contact_form input[type="text"],
+#contact #contact_form input[type="email"],
+#contact #contact_form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact #contact_form textarea {
+    height: 150px;
+}
+
+#contact #contact_form button[type="submit"],
+#contact #contact_form button[type="reset"] {
+    background-color: #008cff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+#contact #contact_form button[type="submit"]:hover,
+#contact #contact_form button[type="reset"]:hover {
+    background-color: #0062cc;
+}
+
+#contact #contact_form button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+#contact #contact_form button[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+/* Target the aside */
+#contact #contact_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Target the social media icons */
+#contact #contact_info ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contact #contact_info ul li {
+    margin-right: 20px;
+}
+
+#contact #contact_info ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+#contact #contact_info ul li a:hover {
+    background-color: #008cff;
+}
+
+#contact #contact_info ul li a img {
+    width: 50%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* footer
+============================================ */
+footer {
+    color: #e7f0ed;
+}
+
+footer h4, footer p{
+    position: relative;
+    margin: 10px;
+    top: 20px;
+}
+
+footer > img {
+    position: relative;
+    top: 100px;
+    z-index: -1;
+}
