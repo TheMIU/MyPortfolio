@@ -209,8 +209,6 @@ main > section:nth-child(1) > img {
 }
 
 #design {
-    background-color: #3164ff;
-    padding-left: 50px;
     padding-top: 30px;
 }
 
@@ -304,6 +302,56 @@ main > section:nth-child(1) > img {
 }
 
 #programming > article:nth-child(3) > section:nth-child(5) {
+    background-color: #e7f0ed;
+}
+
+/* Work > Design >
+============================================ */
+#design > article:nth-child(1) {
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+}
+
+#design > article:nth-child(1) > aside:nth-child(1) {
+    background-color: rgb(231, 240, 237);
+    width: 100px;
+}
+
+#design > article:nth-child(1) > aside:nth-child(2) {
+    width: 20%;
+    position: relative;
+}
+
+#design > article:nth-child(1) > aside:nth-child(3) {
+    width: 80%;
+    position: relative;
+    top: 20px;
+    padding-right: 50px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+
+#design > article:nth-child(1) > aside:nth-child(2) > img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#design > article:nth-child(2) > section:nth-child(2) {
+    background-color: #e7f0ed;
+}
+
+#design > article:nth-child(3) > section:nth-child(3) {
+    background-color: #e7f0ed;
+}
+
+#design > article:nth-child(3) > section:nth-child(5) {
     background-color: #e7f0ed;
 }
 
@@ -488,9 +536,9 @@ main > section:nth-child(1) > img {
     background-color: #333960;
     height: 10px;
     border-bottom: #e7f0ed solid 5px;
-    width: 90%;
+    width: 100%;
     position: absolute;
-    left: 90px;
+    left: 0;
     right: 0;
 }
 
