@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Four</title>
+    <link href="../../Transition/CaseTwo/assets/css/normalize.css" rel="stylesheet">
+
+    <style>
+        #circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: auto;
+
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+
+            border: #ff253a solid 2px;
+
+            animation: enlarge_and_opacity_tween;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+
+            display: none; /* hide the circle by default */
+        }
+
+        @keyframes enlarge_and_opacity_tween {
+            from {
+                height: 50px;
+                width: 50px;
+
+                opacity: 100%;
+            }
+            to {
+                height: 200px;
+                width: 200px;
+
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<section>
+    <div id="circle"></div>
+</section>
+
+<script>
+    var circle = document.getElementById("circle");
+
+    document.addEventListener("click", function(event) {
+        // Get the x and y coordinates of the click event relative to the viewport
+        var x = event.clientX;
+        var y = event.clientY;
+
+        // Set the position of the circle div to the mouse coordinates
+        circle.style.left = x + "px";
+        circle.style.top = y + "px";
+
+        // Show the circle by changing its display property to "block"
+        circle.style.display = "block";
+    });
+</script>
+</body>
+</html>
