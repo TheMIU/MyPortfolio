@@ -343,17 +343,35 @@ main > section:nth-child(1) > img {
     margin: auto;
 }
 
+#design > article:nth-child(2) img {
+   width: 100%;
+}
+
 #design > article:nth-child(2) > section:nth-child(2) {
     background-color: #e7f0ed;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 10px;
+"
 }
 
-#design > article:nth-child(3) > section:nth-child(3) {
+#design > article:nth-child(2) > section:nth-child(3) {
     background-color: #e7f0ed;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
-#design > article:nth-child(3) > section:nth-child(5) {
-    background-color: #e7f0ed;
+.arrows{
+    font-weight: bold;
+    color: #e7b609;
+    font-size: 30px;
 }
+
+
 
 /* icon set
 ============================================ */
