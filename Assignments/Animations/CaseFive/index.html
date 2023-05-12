@@ -8,19 +8,21 @@
     <style>
 
         section{
-        /*    border: #ff253a solid 1px;*/
-/*
+            width: calc(100%*5);
+            height: 100vh;
+
+            /*border: #ff253a 2px solid;*/
             display: flex;
-            grid-template-rows: repeat(1, 1fr);
-            grid-template-columns:  repeat(4, 1fr);*/
         }
 
         div {
-            width: 100%;
-            height: 100vh;
-
+            /*border: black 2px solid;*/
+            width: 100vw;
             background-position: center;
             background-size: cover;
+
+            flex-shrink: 0;
+
         }
 
         div:nth-child(1) {
@@ -43,11 +45,17 @@
             background-image: url("assets/img/4.jpg");
         }
 
+        div:nth-child(5) {
+            flex-shrink: 0;
+            background-image: url("assets/img/1.jpg");
+        }
+
     </style>
 
 </head>
 <body>
 <section>
+    <div></div>
     <div></div>
     <div></div>
     <div></div>
