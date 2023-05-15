@@ -1,4 +1,44 @@
 main>section{
-    height: 500px;
+
     width: 100%;
+}
+
+
+#work>section:nth-child(2){
+    display: inline;
+}
+
+#games{
+    background: lightcoral;
+    height: 100vh;
+}
+
+#programming{
+    background: #333960;
+    height: 100vh;
+}
+
+#design{
+    background: rgb(255, 187, 0);
+    height: 100vh;
+}
+
+#other{
+    background: lightgray;
+    height: 100vh;
+}
+
+#more{
+    background: lightgreen;
+    height: 100vh;
+}
+
+#contact{
+    background: lightpink;
+    height: 100vh;
+}
+
+#gap{
+    background: #3164ff;
+    height: 30vh;
 }
