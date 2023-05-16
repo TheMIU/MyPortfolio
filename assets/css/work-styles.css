@@ -120,7 +120,6 @@
 
     justify-content: center;
     width: 80%;
-
 }
 
 .grid2 > div {
@@ -151,7 +150,7 @@
 .grid2 > div:nth-child(1),
 .grid2 > div:nth-child(3),
 .grid2 > div:nth-child(5),
-.grid2 > div:nth-child(7) {
+.grid2 > div:nth-child(7){
     /*background: #e7b609;*/
     display: flex;
     align-items: center;
@@ -161,12 +160,13 @@
 .grid2 > div:nth-child(2),
 .grid2 > div:nth-child(4),
 .grid2 > div:nth-child(6),
-.grid2 > div:nth-child(8) {
+.grid2 > div:nth-child(8){
     /*background: #43586c;*/
     display: flex;
     align-items: center;
     justify-content: left;
 }
+
 
 
 /* design grid
@@ -188,11 +188,11 @@
     align-items: center;
 }
 
-.design-grid p{
+.design-grid p {
     line-height: 25px;
 }
 
-.arrows{
+.arrows {
     font-weight: bold;
     color: #ffca02;
     font-size: 30px;

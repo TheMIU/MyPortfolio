@@ -91,3 +91,26 @@ height: 90%
 }
 
 
+/*assignments
+============================================ */
+#assignments{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#assignments section{
+    margin: 30px;
+    background: #E7F0ED;
+    height: 50px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+#assignments p, #assignments a{
+    margin: 0;
+    align-self: center;
+}
+
+
