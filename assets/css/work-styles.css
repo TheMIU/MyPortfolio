@@ -1,0 +1,168 @@
+#work > section:nth-child(2) {
+    display: inline;
+}
+
+#games {
+    background: rgba(51, 57, 96, 0.1);
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+#programming {
+    background: rgba(51, 57, 96, 0.1);
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+#design {
+    background: rgba(51, 57, 96, 0.1);
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* grid 1
+============================================ */
+.grid1 {
+    position: relative;
+    left: -3%;
+
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 10fr;
+    width: 95%;
+}
+
+/*
+.grid1 > div {  !*<<<<<<<<<<< height manual *!
+    height: 60vh;
+}
+*/
+
+.grid1 > div:nth-child(1) {
+    background: rgba(51, 57, 96, 0.5);
+}
+
+.grid1 > div:nth-child(2) {
+    background: #14192B;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.grid1 > div:nth-child(3) {
+    align-self: center;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+
+    padding-left: 3%;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(2) {
+    background: rgb(255, 255, 255);
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(2) > p {
+    padding-left: 3%;
+    padding-right: 3%;
+    line-height: 25px;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(2) dfn {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#design .grid1 > div:nth-child(3) > div:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(3) > div {
+    display: flex;
+    align-items: center;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) {
+    padding-left: 10%;
+}
+
+.grid1 > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > section {
+    display: flex;
+}
+
+/* grid 2
+============================================ */
+.grid2-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-content: center;
+    width: 80%;
+}
+
+.grid2 > div {
+    padding-bottom: 80px;
+}
+
+/*.grid2 > div { !*<<<<<<<<<<< height manual *!
+    !*border: black 2px solid;*!
+    height: 250px;
+}*/
+
+.grid2 > div > section > p {
+    font-size: 15px;
+}
+
+.grid2 > div > section > h5 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.grid2 > div > section{
+    background: #E7F0ED;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid2 > div:nth-child(1),
+.grid2 > div:nth-child(3),
+.grid2 > div:nth-child(5),
+.grid2 > div:nth-child(7) {
+    /*background: #e7b609;*/
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.grid2 > div:nth-child(2),
+.grid2 > div:nth-child(4),
+.grid2 > div:nth-child(6),
+.grid2 > div:nth-child(8) {
+    /*background: #43586c;*/
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}

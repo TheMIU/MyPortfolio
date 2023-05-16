@@ -1,0 +1,9 @@
+/* Grayscale images hover
+============================================ */
+.img_gray {
+    filter: grayscale(1);
+}
+
+.img_gray:hover {
+    filter: none;
+}

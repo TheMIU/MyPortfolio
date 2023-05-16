@@ -4,24 +4,6 @@ main>section{
 }
 
 
-#work>section:nth-child(2){
-    display: inline;
-}
-
-#games{
-    background: lightcoral;
-    height: 100vh;
-}
-
-#programming{
-    background: #333960;
-    height: 100vh;
-}
-
-#design{
-    background: rgb(255, 187, 0);
-    height: 100vh;
-}
 
 #other{
     background: lightgray;
