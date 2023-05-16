@@ -1,0 +1,128 @@
+/* Contact form
+============================================ */
+#contact section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 80px;
+}
+
+#contact section:nth-child(2) > section {
+    display: grid;
+    grid-template-columns:  3fr 2fr;
+    column-gap: 50px;
+
+    width: 80%;
+}
+
+#contact form {
+}
+
+#contact aside {
+    background: #e7b609;
+}
+
+/* Target the form */
+#contact #contact_form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Target the labels and inputs inside the form */
+#contact #contact_form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#contact #contact_form input[type="text"],
+#contact #contact_form input[type="email"],
+#contact #contact_form textarea {
+    border: #333960 solid 1px;
+    margin-bottom: 20px;
+}
+
+#contact #contact_form textarea {
+    height: 150px;
+}
+
+#contact #contact_form button[type="submit"] {
+    background-color: #333960;
+    border-bottom: #e7b609 2px solid;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color: #fff;
+    padding: 10px 20px;
+    /*border: none;*/
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#contact_form button[type="submit"] a, #contact_form button[type="submit"] i {
+    font-style: normal;
+    font-weight: bold;
+    color: #e7b609;
+    text-decoration: none;
+}
+
+#contact #contact_form button[type="submit"]:hover {
+    background-color: #242944;
+}
+
+
+/* Target the aside */
+#contact #contact_info {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #333960;
+}
+
+/* Target the social media icons */
+#contact #contact_info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact #contact_info ul li {
+    margin-right: 0;
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact #contact_info ul li img {
+    width: 70%;
+}
+
+#contact #contact_info ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact_info p {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+}

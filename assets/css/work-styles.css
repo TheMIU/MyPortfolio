@@ -120,6 +120,7 @@
 
     justify-content: center;
     width: 80%;
+
 }
 
 .grid2 > div {
@@ -140,7 +141,7 @@
     margin: 0;
 }
 
-.grid2 > div > section{
+.grid2 > div > section {
     background: #E7F0ED;
     width: 80%;
     padding: 20px;
@@ -165,4 +166,35 @@
     display: flex;
     align-items: center;
     justify-content: left;
+}
+
+
+/* design grid
+============================================ */
+.design-grid {
+    position: relative;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+
+    padding-bottom: 50px;
+}
+
+.design-grid > section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+}
+
+.design-grid p{
+    line-height: 25px;
+}
+
+.arrows{
+    font-weight: bold;
+    color: #ffca02;
+    font-size: 30px;
+    margin: 0;
 }

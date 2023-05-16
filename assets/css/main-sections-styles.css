@@ -1,26 +1,11 @@
-main>section{
-
-    width: 100%;
-}
-
-
 
 #other{
-    background: lightgray;
     height: 100vh;
 }
 
 #more{
-    background: lightgreen;
-    height: 100vh;
+
 }
 
-#contact{
-    background: lightpink;
-    height: 100vh;
-}
 
-#gap{
-    background: #3164ff;
-    height: 30vh;
-}
+

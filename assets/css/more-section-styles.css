@@ -1,0 +1,43 @@
+/* More form
+============================================ */
+#more  section:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+
+#more  section:nth-child(2) > section {
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+
+    padding: 25px;
+}
+
+#more section:nth-child(2) h3 {
+    font-weight: bold;
+    background: #14192B;
+    color: white;
+    padding: 10px;
+}
+
+#more section:nth-child(2) article:nth-child(1) {
+    background: #e7f0ed;
+    padding: 25px;
+}
+
+#more section:nth-child(2) article:nth-child(2) {
+    background: #e7f0ed;
+    padding: 25px;
+}
+
+#more section:nth-child(2) article:nth-child(3) {
+    background: #43586c;
+    padding: 25px;
+    color: white;
+}
+
+#more article{
+    font-size: 14px;
+}
