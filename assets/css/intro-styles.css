@@ -1,6 +1,5 @@
 #intro {
     position: relative;
-    background: #43586c;
     height: 90vh;
 }
 
@@ -38,8 +37,6 @@
     width: 25%;
 
     z-index: 2;
-    opacity: 0;
-    filter: grayscale(10);
 }
 
 #intro > section:nth-child(4) {
@@ -116,9 +113,9 @@
     animation: opacity-up forwards 1s 0.5s;
 }
 
-#intro > div:nth-child(1) > img {
+/*#intro > div:nth-child(1) > img {
     animation: opacity-up forwards 1s 1s;
-}
+}*/
 
 #intro > section:nth-child(4) > div:nth-child(2) {
     animation: opacity-up forwards 1s 1.5s;
