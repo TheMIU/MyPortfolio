@@ -3,13 +3,24 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body>main>section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body>main>section>section>section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* table */
 table > caption {
     caption-side: top;
 
     font-size: 25px;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 20px;
 
     font-weight: normal;
@@ -25,10 +36,10 @@ tbody {
 }
 
 table {
-    position: absolute;
+    /*position: absolute;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: auto;*/
 
     border-collapse: collapse;
     font-size: 1rem;
@@ -36,12 +47,12 @@ table {
     width: 95%;
 }
 
-table:nth-child(1){
-    top : 0;
+table:nth-child(1) {
+    top: 0;
 }
 
-table:nth-child(2){
-    bottom : 0;
+table:nth-child(2) {
+    bottom: 0;
 }
 
 td, th {
