@@ -54,3 +54,16 @@ body > section section:nth-child(3) {
     justify-content: end;
     border-top: white 2px solid;
 }
+
+body > section section:nth-child(4) {
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+button{
+    cursor: pointer;
+}
+button:hover{
+    background-color: #9eeaf9;
+}
