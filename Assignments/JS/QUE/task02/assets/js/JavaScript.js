@@ -18,8 +18,6 @@ setInterval(function () {
 
 }, 300);
 
-let arr = ["A", "B", "C", "D"];
-
 function startQue() {
     isStared = true;
 }

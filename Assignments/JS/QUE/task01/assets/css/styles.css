@@ -1,0 +1,69 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+h1 {
+    top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+body > section {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: block;
+    align-items: center;
+}
+
+body > section > section > div {
+    height: 70px;
+    width: 100px;
+    background-image: url("../images/berjalan-walking.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 5%;
+}
+
+#house{
+    height: 100px;
+    width: 100px;
+    background-image: url("../images/img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: relative;
+    top: -25px;
+    left: 30px;
+}
+body > section section {
+    display: flex;
+
+    margin: auto;
+    align-items: flex-start;
+}
+
+body > section section:nth-child(1) {
+    justify-content: center;
+    gap: 2px;
+}
+
+body > section section:nth-child(2) {
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9eeaf9;
+}
