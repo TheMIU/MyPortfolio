@@ -95,7 +95,7 @@ $("#btnCustomer").click(function () {
     let salary = $("#txtCustomerSalary").val();
 
     let tBody = $("#tblCustomer");
-    let tr = $("<tr> <td>" + id + "</td> <td>" + name + "</td> <td>" + address + "</td><td>" + salary + "</td> </tr>");
+    let tr = $(`<tr> <td> ${id} </td> <td> ${name} </td> <td> ${address} </td><td> ${salary}</td> </tr>`);
     customerArray.push({id, name, address, salary});
     tBody.append(tr);
 });
