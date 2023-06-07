@@ -631,70 +631,23 @@
 </main>
 
 
-<script src="assets/js/JavaScript.js"></script>
+
 <script src="assets/js/jquery-3.7.0.min.js"></script>
+<script src="assets/js/JavaScript.js"></script>
 <script>
+   /* let customerArray = [];
+
     $("#btnCustomer").click(function () {
-        //get typed values of input fields
-        // let id = document.getElementById("txtCustomerID").value;
         let id = $("#txtCustomerID").val();
         let name = $("#txtCustomerName").val();
         let address = $("#txtCustomerAddress").val();
         let salary = $("#txtCustomerSalary").val();
 
-        //catch the table body
         let tBody = $("#tblCustomer");
-        //  document.getElementById("tblCustomer");
-
-        // let's see how we should insert a table row using html format
-        //<tr>
-        // <td>id</td>
-        // <td>name</td>
-        // <td>address</td>
-        // <td>salary</td>
-        // </tr>
-
-        //ok then, let's create the above row
-        /*let tr = document.createElement("tr");*/
-        let tr = $("<tr>");
-
-        //let's create another four columns
-        let col1 = $("<td>");
-        let col2 = $("<td>");
-        let col3 = $("<td>");
-        let col4 = $("<td>");
-
-        //set input fields values to the above created columns
-        col1.text(id);
-        col2.text(name);
-        col3.text(address);
-        col4.text(salary);
-
-        //set 4 columns to the row
-        //set 4 columns to the previously created row
-        tr.append(col1);
-        tr.append(col2);
-        tr.append(col3);
-        tr.append(col4);
-
-        //set the tr to the table body
-        //set the row to the table body
+        let tr = $("<tr> <td>" + id + "</td> <td>" + name + "</td> <td>" + address + "</td><td>" + salary + "</td> </tr>");
+        customerArray.push({id, name, address, salary});
         tBody.append(tr);
-
-        /*
-
-            // Get the tbody element
-            var tbody = $("#tbody");
-
-        // Create a new tr element
-            var tr = $("<tr>");
-
-        // Add some child elements to the tr element
-            tr.append("<td>1</td>");
-            tr.append("<td>2</td>");
-
-        */
-    });
+    });*/
 </script>
 </body>
 </html>
