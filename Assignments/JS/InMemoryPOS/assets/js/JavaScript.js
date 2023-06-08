@@ -88,7 +88,7 @@ function goHome() {
 
 let customerArray = [];
 
-$("#btnCustomer").click(function () {
+/*$("#btnCustomer").click(function () {
     let id = $("#txtCustomerID").val();
     let name = $("#txtCustomerName").val();
     let address = $("#txtCustomerAddress").val();
@@ -97,5 +97,24 @@ $("#btnCustomer").click(function () {
     let tBody = $("#tblCustomer");
     let tr = $(`<tr> <td> ${id} </td> <td> ${name} </td> <td> ${address} </td><td> ${salary}</td> </tr>`);
     customerArray.push({id, name, address, salary});
+    tBody.append(tr);
+});*/
+
+$("#btnCustomer").click(function () {
+    let id = $("#txtCustomerID").val();
+    let name = $("#txtCustomerName").val();
+    let address = $("#txtCustomerAddress").val();
+    let salary = $("#txtCustomerSalary").val();
+
+    let customerObject = {
+        customerId : id,
+        customerName : name,
+        customerAddress : address,
+        customerSalary: salary
+    }
+
+    let tBody = $("#tblCustomer");
+    let tr = $(`<tr> <td> ${id} </td> <td> ${name} </td> <td> ${address} </td><td> ${salary}</td> </tr>`);
+    customerArray.push(customerObject);
     tBody.append(tr);
 });

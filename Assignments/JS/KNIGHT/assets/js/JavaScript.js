@@ -2,7 +2,9 @@ let colors = ["#ffffff","#ffffff", "#ffcfd2", "#ff838e", "#ff2020", "#ff838e", "
 let divArray = document.querySelector("section").querySelectorAll("div");
 let isStared = false;
 let goLeft = false;
-let audio = document.getElementById("audio");
+let KITTScanner = document.getElementById("KITTScanner");
+let audio = document.getElementById("bgAudio");
+
 
 let interval = setInterval(function () {
     if (isStared) {
@@ -39,9 +41,11 @@ let interval = setInterval(function () {
 function startQue() {
     isStared = true;
     audio.play();
+    KITTScanner.play();
 }
 
 function stopQue() {
     isStared = false;
     audio.pause();
+    KITTScanner.pause();
 }
