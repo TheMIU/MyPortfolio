@@ -41,7 +41,7 @@
 
 </head>
 
-<body style="background-color: #1a1d20">
+<body>
 <!--/////////////navigation-bar/////////////-->
 <header id="navigation-bar">
     <!--nav bar-->
@@ -87,7 +87,7 @@
 <div class="row "
      style=" height: 100vh ; width: 100% ; position: absolute; top: 0; bottom: 0; left: 0; right: 0 ;
      margin: auto; z-index: -100;">
-    <div class="col-12 " style="height: 85%; background-color: rgb(26,29,32)"></div>
+    <div class="col-12 " style="height: 85%; background-color: white"></div>
     <div class="col-12 " style="height: 15%; background-color: #3B8AD3"></div>
 </div>
 
@@ -168,70 +168,7 @@
                             <th scope="col">Salary</th>
                         </tr>
                         </thead>
-                        <!--<tbody class="table-group-divider">
-                        <tr>
-                            <td>c001</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>c002</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        <tr>
-                            <td>c003</td>
-                            <td>Mark</td>
-                            <td>Galle</td>
-                            <td>5000</td>
-                        </tr>
-
-                        </tbody>-->
-
+                        <tbody class="table-group-divider"></tbody>
                     </table>
                 </div>
             </section>
@@ -263,117 +200,7 @@
                     <div class="mt-2 text-end" style="width: 100%">
                         <button class="btn btn-danger" type="button">Delete</button>
                         <button class="btn btn-primary" type="button">Cancel</button>
-                        <button class="btn btn-success" id="btnCustomer" type="button">Save</button>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </section>
-</main>
-
-<!--/////////////manage orders/////////////-->
-<main class="container-fluid" id="mng-orders">
-    <!--main content-->
-    <section>
-        <section class="row p-2" style="height: 100%">
-            <section class="col-lg-8 col-12  bg-body" style="height: 100%">
-                <!--search Bar-->
-                <div class="input-group row mt-2 mb-1">
-                    <div class="col-11">
-                        <input class="form-control" type="search">
-                    </div>
-                    <button class="btn btn-primary col-1" type="button">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-                <!--table-->
-                <div class="table-responsive ">
-                    <table class="table table-hover">
-                        <thead class="table-info">
-                        <tr>
-                            <th scope="col">Order ID</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Customer ID</th>
-                            <th scope="col">Price</th>
-                        </tr>
-                        </thead>
-                        <tbody class="table-group-divider">
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>O001</td>
-                            <td>2022/02/25</td>
-                            <td>C001</td>
-                            <td>5000</td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!--///////////////////////////////////-->
-            <section class="col-lg-4 col-12 vh-75 bg-body">
-                <div class="text-center mt-2 p-1" style="background-color: #0d6efd ; color:white;">
-                    <i class="fa-solid fa-border-all" style="color: #ffffff;"></i>
-                    Manage Order
-                </div>
-                <div>
-                    <div class="mt-2">
-                        <button class="btn btn-primary" type="button">Edit</button>
-                        <button class="btn btn-primary" type="button">New</button>
-                    </div>
-                    <div class="row mt-2 ">
-                        <label class="col-4 mt-2">OrderID</label>
-                        <input class="col-7 mt-2">
-
-                        <label class="col-4 mt-2">Date</label>
-                        <input class="col-7 mt-2">
-
-                        <label class="col-4 mt-2">Customer ID</label>
-                        <input class="col-7 mt-2">
-
-                        <label class="col-4 mt-2">Price</label>
-                        <input class="col-7 mt-2">
-                    </div>
-                    <div class="mt-2 text-end" style="width: 100%">
-                        <button class="btn btn-danger" type="button">Delete</button>
-                        <button class="btn btn-primary" type="button">Cancel</button>
-                        <button class="btn btn-success" type="button">Save</button>
+                        <button class="btn btn-success" id="btnSaveCustomer" type="button">Save</button>
                     </div>
                 </div>
             </section>
@@ -407,55 +234,8 @@
                             <th scope="col">Qty</th>
                         </tr>
                         </thead>
-                        <tbody class="table-group-divider">
-                        <tr>
-                            <td>I001</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I002</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I003</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I004</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I005</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I006</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I007</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
-                        <tr>
-                            <td>I008</td>
-                            <td>Soap</td>
-                            <td>150</td>
-                            <td>200</td>
-                        </tr>
+                        <tbody class="table-group-divider" id="tblItem">
+
                         </tbody>
                     </table>
                 </div>
@@ -474,21 +254,21 @@
                     </div>
                     <div class="row mt-2 ">
                         <label class="col-4 mt-2">Code</label>
-                        <input class="col-7 mt-2">
+                        <input class="col-7 mt-2" id="txtItemCode">
 
                         <label class="col-4 mt-2">Name</label>
-                        <input class="col-7 mt-2">
+                        <input class="col-7 mt-2" id="txtItemName">
 
                         <label class="col-4 mt-2">Price</label>
-                        <input class="col-7 mt-2">
+                        <input class="col-7 mt-2" id="txtItemPrice">
 
                         <label class="col-4 mt-2">Qty</label>
-                        <input class="col-7 mt-2">
+                        <input class="col-7 mt-2" id="txtItemQTY">
                     </div>
                     <div class="mt-2 text-end" style="width: 100%">
                         <button class="btn btn-danger" type="button">Delete</button>
                         <button class="btn btn-primary" type="button">Cancel</button>
-                        <button class="btn btn-success" type="button">Save</button>
+                        <button class="btn btn-success" id="btnSaveItem" type="button">Save</button>
                     </div>
                 </div>
             </section>
@@ -496,7 +276,75 @@
     </section>
 </main>
 
-<!--/////////////manage order/////////////-->
+<!--/////////////manage orders/////////////-->
+<main class="container-fluid" id="mng-orders">
+    <!--main content-->
+    <section>
+        <section class="row p-2" style="height: 100%">
+            <section class="col-lg-8 col-12  bg-body" style="height: 100%">
+                <!--search Bar-->
+                <div class="input-group row mt-2 mb-1">
+                    <div class="col-11">
+                        <input class="form-control" type="search">
+                    </div>
+                    <button class="btn btn-primary col-1" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!--table-->
+                <div class="table-responsive ">
+                    <table class="table table-hover">
+                        <thead class="table-info">
+                        <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-group-divider" id="tblOrders">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!--///////////////////////////////////-->
+            <section class="col-lg-4 col-12 vh-75 bg-body">
+                <div class="text-center mt-2 p-1" style="background-color: #0d6efd ; color:white;">
+                    <i class="fa-solid fa-border-all" style="color: #ffffff;"></i>
+                    Manage Order
+                </div>
+                <div>
+                    <div class="mt-2">
+                        <button class="btn btn-primary" type="button">Edit</button>
+                        <button class="btn btn-primary" type="button">New</button>
+                    </div>
+                    <div class="row mt-2 ">
+                        <label class="col-4 mt-2">OrderID</label>
+                        <input class="col-7 mt-2" id="txtOrderID">
+
+                        <label class="col-4 mt-2">Date</label>
+                        <input class="col-7 mt-2" id="txtData">
+
+                        <label class="col-4 mt-2">Customer ID</label>
+                        <input class="col-7 mt-2" id="txtCusID">
+
+                        <label class="col-4 mt-2">Price</label>
+                        <input class="col-7 mt-2" id="txtItemPrice2">
+                    </div>
+                    <div class="mt-2 text-end" style="width: 100%">
+                        <button class="btn btn-danger" type="button">Delete</button>
+                        <button class="btn btn-primary" type="button">Cancel</button>
+                        <button class="btn btn-success" type="button" id="btnSaveOrders">Save</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</main>
+
+<!--/////////////Place order/////////////-->
 <main class="container-fluid" id="place-order">
     <!--main content-->
     <section>
@@ -629,7 +477,6 @@
         </section>
     </section>
 </main>
-
 
 
 <script src="assets/js/jquery-3.7.0.min.js"></script>
