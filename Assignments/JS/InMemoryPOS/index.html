@@ -151,15 +151,15 @@
                 <!--search Bar-->
                 <div class="input-group row mt-2 mb-1">
                     <div class="col-11">
-                        <input class="form-control" type="search">
+                        <input class="form-control" id="txtSearchCus" type="search">
                     </div>
-                    <button class="btn btn-primary col-1" type="button">
+                    <button class="btn btn-primary col-1" id="btnSearchCustomer" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
                 <!--table-->
                 <div class="table-responsive ">
-                    <table class="table table-hover" id="tblCustomer">
+                    <table class="table table-hover">
                         <thead class="table-info">
                         <tr>
                             <th scope="col">ID</th>
@@ -168,7 +168,9 @@
                             <th scope="col">Salary</th>
                         </tr>
                         </thead>
-                        <tbody class="table-group-divider"></tbody>
+                        <tbody class="table-group-divider" id="tblCustomer">
+
+                        </tbody>
                     </table>
                 </div>
             </section>
@@ -186,7 +188,7 @@
                     </div>
                     <div class="row mt-2 ">
                         <label class="col-4 mt-2">ID</label>
-                        <input class="col-7 mt-2" id="txtCustomerID">
+                        <input class="col-7 mt-2 " id="txtCustomerID">
 
                         <label class="col-4 mt-2">Name</label>
                         <input class="col-7 mt-2" id="txtCustomerName">
@@ -198,9 +200,10 @@
                         <input class="col-7 mt-2" id="txtCustomerSalary">
                     </div>
                     <div class="mt-2 text-end" style="width: 100%">
-                        <button class="btn btn-danger" type="button">Delete</button>
-                        <button class="btn btn-primary" type="button">Cancel</button>
+                        <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete</button>
+                        <button class="btn btn-primary" id="btnCancelCustomer" type="button">Cancel</button>
                         <button class="btn btn-success" id="btnSaveCustomer" type="button">Save</button>
+                        <button class="btn btn-success" id="btnUpdateCustomer" type="button">Update</button>
                     </div>
                 </div>
             </section>
@@ -336,7 +339,7 @@
                     <div class="mt-2 text-end" style="width: 100%">
                         <button class="btn btn-danger" type="button">Delete</button>
                         <button class="btn btn-primary" type="button">Cancel</button>
-                        <button class="btn btn-success" type="button" id="btnSaveOrders">Save</button>
+                        <button class="btn btn-success" id="btnSaveOrders" type="button">Save</button>
                     </div>
                 </div>
             </section>
