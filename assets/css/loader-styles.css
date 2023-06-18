@@ -9,15 +9,27 @@
 }
 
 #loader_logo > section {
-    width: 100px;
-    height: 100px;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     margin: auto;
+
+}
+
+#loader_logo > section:nth-child(1) {
+    width: 100px;
+    height: 100px;
     background: url("../images/miusoftLogo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#loader_logo > section:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    background: url("../images/load-gif.gif");
     background-size: cover;
     background-position: center;
 }
