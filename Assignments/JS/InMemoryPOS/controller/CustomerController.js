@@ -42,7 +42,7 @@ $("#btnSaveCustomer").click(function () {
         alert("Try again !");
     }
     getAllCustomers();
-    clearAll();
+    clearAllCustomerFields();
 
     $("#txtCustomerID").focus();
 });
@@ -77,7 +77,7 @@ $('#btnUpdateCustomer').click(function () {
         alert("Try again !");
     }
     getAllCustomers();
-    clearAll();
+    clearAllCustomerFields();
 });
 
 function getAllCustomers() {
@@ -151,24 +151,17 @@ function getSearchCustomer(searchTxt) {
 
 // button cancel , clear fields
 $('#btnCancelCustomer').click(function () {
-    clearAll();
+    clearAllCustomerFields();
 });
 
-function clearAll() {
+function clearAllCustomerFields() {
     $("#txtCustomerID").val("");
     $("#txtCustomerName").val("");
     $("#txtCustomerAddress").val("");
     $("#txtCustomerSalary").val("");
 
     changeTextFieldColorsToBack([customerIDField, customerNameField, customerAddressField, customerSalaryField]);
-    hideErrorMessages();
-}
-
-function changeTextFieldColorsToBack(fields) {
-    for (let i=0; i<fields.length; i++){
-        fields[i].removeClass('border-success');
-        fields[i].removeClass('border-danger');
-    }
+    customerFormHideErrorMessages();
 }
 
 // button delete
@@ -194,7 +187,7 @@ $('#btnDeleteCustomer').click(function () {
 
     // update table
     getAllCustomers();
-    clearAll()
+    clearAllCustomerFields()
 });
 
 // check customer is exists

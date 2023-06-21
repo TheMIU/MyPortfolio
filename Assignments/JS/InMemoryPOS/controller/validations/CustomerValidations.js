@@ -31,68 +31,39 @@ let invalidAddressMessage = $('#invalidAddressMessage');
 let invalidSalaryMessage = $('#invalidSalaryMessage');
 
 //hide at beginning
-hideErrorMessages()
+customerFormHideErrorMessages()
 
-function hideErrorMessages() {
+function customerFormHideErrorMessages() {
     invalidIdMessage.hide();
     invalidNameMessage.hide();
     invalidAddressMessage.hide();
     invalidSalaryMessage.hide();
 }
 
-
 // keyup functions
 // Validate ID
 customerIDField.on('keyup', function () {
     isValidCusID = isValid(regexCusID, customerIDField.val());
-    changeTextFieldColors(customerIDField,isValidCusID);
-    displayErrorText(invalidIdMessage,isValidCusID);
+    MakeChanges(isValidCusID,customerIDField,invalidIdMessage);
 });
 
 // Validate Name
 customerNameField.on('keyup', function () {
     isValidName = isValid(regexName, customerNameField.val());
-    changeTextFieldColors(customerNameField,isValidName);
-    displayErrorText(invalidNameMessage,isValidName);
+    MakeChanges(isValidName,customerNameField,invalidNameMessage);
 });
 
 // validate address
 customerAddressField.on('keyup', function () {
     isValidAddress = isValid(regexAddress, customerAddressField.val());
-    changeTextFieldColors(customerAddressField, isValidAddress);
-    displayErrorText(invalidAddressMessage,isValidAddress);
+    MakeChanges(isValidAddress,customerAddressField,invalidAddressMessage);
 });
 
 // validate salary
 customerSalaryField.on('keyup', function () {
     isValidSalary = isValid(regexSalary, customerSalaryField.val());
-    changeTextFieldColors(customerSalaryField, isValidSalary);
-    displayErrorText(invalidSalaryMessage,isValidSalary);
+    MakeChanges(isValidSalary,customerSalaryField,invalidSalaryMessage);
 });
-
-// check field value is matching to regex
-function isValid(regexPattern, fieldValue) {
-    return regexPattern.test(fieldValue);
-}
-
-// text field border color change
-function changeTextFieldColors(field,condition) {
-    if (condition) {
-        field.removeClass('border-danger').addClass('border-success');
-        field.css('border-width', '2px');
-    } else {
-        field.removeClass('border-success').addClass('border-danger');
-        field.css('border-width', '2px');
-    }
-}
-
-function displayErrorText(messageLabel, condition) {
-    if(condition){
-        messageLabel.hide();
-    }else {
-        messageLabel.show();
-    }
-}
 
 ///////////////////////////////////////////////
 

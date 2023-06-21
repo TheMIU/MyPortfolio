@@ -82,12 +82,11 @@
         </div>
     </nav>
 </header>
-
 <div class="row "
      style=" height: 100vh ; width: 100% ; position: absolute; top: 0; bottom: 0; left: 0; right: 0 ;
      margin: auto; z-index: -100;">
     <div class="col-12 " style="height: 85%; background-color: white"></div>
-    <div class="col-12 " style="height: 15%; background-color: #3B8AD3"></div>
+    <div class="col-12 " style="height: 15%; background: linear-gradient(to bottom, #81c3ff, white);"></div>
 </div>
 
 <!--/////////////Login/////////////-->
@@ -233,9 +232,9 @@
                 <!--search Bar-->
                 <div class="input-group row mt-2 mb-1">
                     <div class="col-11">
-                        <input class="form-control" type="search">
+                        <input class="form-control" type="search" id="txtSearchItem">
                     </div>
-                    <button class="btn btn-primary col-1" type="button">
+                    <button class="btn btn-primary col-1" type="button" id="btnSearchItem">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -264,27 +263,42 @@
                     Manage Store
                 </div>
                 <div>
-                    <div class="mt-2">
+                    <!--<div class="mt-2">
                         <button class="btn btn-primary" type="button">Edit</button>
                         <button class="btn btn-primary" type="button">New</button>
-                    </div>
+                    </div>-->
                     <div class="row mt-2 ">
-                        <label class="col-4 mt-2">Code</label>
-                        <input class="form-control col-7 mt-2" id="txtItemCode">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Code</label>
+                            <input class="form-control col-7 mt-2" id="txtItemCode" type="text">
+                            <small id="invalidCodeMessage" class="text-danger">Invalid Code</small>
+                        </div>
 
-                        <label class="col-4 mt-2">Name</label>
-                        <input class="form-control col-7 mt-2" id="txtItemName">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Item Name</label>
+                            <input class="form-control col-7 mt-2" id="txtItemName" type="text">
+                            <small id="invalidItemNameMessage" class="text-danger">Invalid Item Name</small>
+                        </div>
 
-                        <label class="col-4 mt-2">Price</label>
-                        <input class="form-control col-7 mt-2" id="txtItemPrice">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Price</label>
+                            <input class="form-control col-7 mt-2" id="txtItemPrice" type="text">
+                            <small id="invalidItemPriceMessage" class="text-danger">Invalid Price</small>
+                        </div>
 
-                        <label class="col-4 mt-2">Qty</label>
-                        <input class="form-control col-7 mt-2" id="txtItemQTY">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Qty</label>
+                            <input class="form-control col-7 mt-2" id="txtItemQTY" type="text">
+                            <small id="invalidItemQTYMessage" class="text-danger">Invalid Qty</small>
+                        </div>
+
                     </div>
                     <div class="mt-2 text-end" style="width: 100%">
-                        <button class="btn btn-danger" type="button">Delete</button>
-                        <button class="btn btn-primary" type="button">Cancel</button>
+                        <button class="btn btn-info" id="btnRefreshItem" type="button">Refresh</button>
+                        <button class="btn btn-danger" id="btnDeleteItem" type="button">Delete</button>
+                        <button class="btn btn-primary" id="btnCancelItem" type="button">Cancel</button>
                         <button class="btn btn-success" id="btnSaveItem" type="button">Save</button>
+                        <button class="btn btn-success" id="btnUpdateItem" type="button">Update</button>
                     </div>
                 </div>
             </section>
@@ -332,27 +346,42 @@
                     Manage Order
                 </div>
                 <div>
-                    <div class="mt-2">
+                    <!--<div class="mt-2">
                         <button class="btn btn-primary" type="button">Edit</button>
                         <button class="btn btn-primary" type="button">New</button>
-                    </div>
+                    </div>-->
                     <div class="row mt-2 ">
-                        <label class="col-4 mt-2">OrderID</label>
-                        <input class="form-control col-7 mt-2" id="txtOrderID">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">OrderID</label>
+                            <input class="form-control col-7 mt-2" id="txtOrderID" type="text">
+                            <small id="invalidOrderIDMessage" class="text-danger">Invalid Order ID</small>
+                        </div>
 
-                        <label class="col-4 mt-2">Date</label>
-                        <input class="form-control col-7 mt-2" id="txtData">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Date</label>
+                            <input class="form-control col-7 mt-2" id="txtData" type="text">
+                            <small id="invalidOrderDateMessage" class="text-danger">Invalid Date</small>
+                        </div>
 
-                        <label class="col-4 mt-2">Customer ID</label>
-                        <input class="form-control col-7 mt-2" id="txtCusID">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Customer ID</label>
+                            <input class="form-control col-7 mt-2" id="txtCusID" type="text">
+                            <small id="invalidCusIDMessage" class="text-danger">Invalid Customer ID</small>
+                        </div>
 
-                        <label class="col-4 mt-2">Price</label>
-                        <input class="form-control col-7 mt-2" id="txtItemPrice2">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Price</label>
+                            <input class="form-control col-7 mt-2" id="txtItemPrice2" type="text">
+                            <small id="invalidItemPrice2Message" class="text-danger">Invalid Price</small>
+                        </div>
+
                     </div>
                     <div class="mt-2 text-end" style="width: 100%">
+                        <button class="btn btn-info" id="btnRefreshOrders" type="button">Refresh</button>
                         <button class="btn btn-danger" type="button">Delete</button>
                         <button class="btn btn-primary" type="button">Cancel</button>
                         <button class="btn btn-success" id="btnSaveOrders" type="button">Save</button>
+                        <button class="btn btn-success" id="btnUpdateOrders" type="button">Update</button>
                     </div>
                 </div>
             </section>
@@ -503,7 +532,9 @@
 <script src="model/Orders.js"></script>
 <script src="model/OrderDetails.js"></script>
 
+<script src="controller/validations/CommonFunctions.js"></script>
 <script src="controller/validations/CustomerValidations.js"></script>
+<script src="controller/validations/ItemValidations.js"></script>
 
 <script src="controller/NavigationController.js"></script>
 <script src="controller/CustomerController.js"></script>
