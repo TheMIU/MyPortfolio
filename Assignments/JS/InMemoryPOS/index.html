@@ -35,10 +35,9 @@
 
     <!-- Google font links
    ============================================= -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -187,17 +186,26 @@
                         <button class="btn btn-primary" type="button">New</button>
                     </div>-->
                     <div class="row mt-2 ">
-                        <label class="col-4 mt-2">ID</label>
-                        <input class="form-control col-7 mt-2 " id="txtCustomerID">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">ID</label>
+                            <input class="form-control col-7 mt-2" id="txtCustomerID" type="text">
+                        </div>
 
-                        <label class="col-4 mt-2">Name</label>
-                        <input class="form-control col-7 mt-2" id="txtCustomerName">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Name</label>
+                            <input class="form-control col-7 mt-2" id="txtCustomerName" type="text">
+                        </div>
 
-                        <label class="col-4 mt-2">Address</label>
-                        <input class="form-control col-7 mt-2" id="txtCustomerAddress">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Address</label>
+                            <input class="form-control col-7 mt-2" id="txtCustomerAddress" type="text">
+                        </div>
 
-                        <label class="col-4 mt-2">Salary</label>
-                        <input class="form-control col-7 mt-2" id="txtCustomerSalary">
+                        <div class="form-group">
+                            <label class="col-4 mt-2">Salary</label>
+                            <input class="form-control col-7 mt-2" id="txtCustomerSalary" type="text">
+                        </div>
+
                     </div>
                     <div class="mt-2 text-end" style="width: 100%">
                         <button class="btn btn-info" id="btnRefreshCustomer" type="button">Refresh</button>

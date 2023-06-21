@@ -14,6 +14,8 @@ $('#tblCustomer').on('click', 'tr', function () {
     $("#txtCustomerName").val(customerName);
     $("#txtCustomerAddress").val(customerAddress);
     $("#txtCustomerSalary").val(customerSalary);
+
+    changeTextFieldColorsToBack([customerIDField, customerNameField, customerAddressField, customerSalaryField]);
 });
 
 

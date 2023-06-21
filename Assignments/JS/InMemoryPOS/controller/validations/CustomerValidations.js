@@ -4,7 +4,12 @@ let isValidAddress = false;
 let isValidSalary = false;
 
 function checkValidCustomer() {
-     return isValidCusID && isValidName && isValidAddress && isValidSalary;
+    isValidCusID = isValid(regexCusID, customerIDField.val());
+    isValidName = isValid(regexName, customerNameField.val());
+    isValidAddress = isValid(regexAddress, customerAddressField.val());
+    isValidSalary = isValid(regexSalary, customerSalaryField.val());
+
+    return isValidCusID && isValidName && isValidAddress && isValidSalary;
 }
 
 // text fields
