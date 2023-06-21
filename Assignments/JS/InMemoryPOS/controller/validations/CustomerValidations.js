@@ -1,67 +1,91 @@
-// validate Customer
-var customerIDField = $('#txtCustomerID');
-var regexCusID = /^C\d{2}-\d{3}$/;
+let isValidCusID = false;
+let isValidName = false;
+let isValidAddress = false;
+let isValidSalary = false;
 
+function checkValidCustomer() {
+     return isValidCusID && isValidName && isValidAddress && isValidSalary;
+}
+
+// text fields
+let customerIDField = $('#txtCustomerID');
+let customerNameField = $('#txtCustomerName');
+let customerAddressField = $('#txtCustomerAddress');
+let customerSalaryField = $('#txtCustomerSalary');
+
+// regex patterns
+let regexCusID = /^(C00-)[0-9]{3}$/;
+let regexName = /^[A-Za-z ]{5,}$/;
+let regexAddress = /^[A-Za-z0-9 ]{8,}$/;
+let regexSalary = /^[0-9]{2,}([.][0-9]{2})?$/;
+
+// keyup functions
+// Validate ID
 customerIDField.on('keyup', function () {
-    if (isValid(regexCusID, customerIDField.val())) {
-        customerIDField.removeClass('border-danger').addClass('border-success');
-        customerIDField.css('border-width', '2px');
-    } else {
-        customerIDField.removeClass('border-success').addClass('border-danger');
-        customerIDField.css('border-width', '2px');
-    }
+    isValidCusID = isValid(regexCusID, customerIDField.val());
+    changeTextFieldColors(customerIDField,isValidCusID);
 });
 
+// Validate Name
+customerNameField.on('keyup', function () {
+    isValidName = isValid(regexName, customerNameField.val());
+    changeTextFieldColors(customerNameField,isValidName);
+});
+
+// validate address
+customerAddressField.on('keyup', function () {
+    isValidAddress = isValid(regexAddress, customerAddressField.val());
+    changeTextFieldColors(customerAddressField, isValidAddress);
+});
+
+// validate salary
+customerSalaryField.on('keyup', function () {
+    isValidSalary = isValid(regexSalary, customerSalaryField.val());
+    changeTextFieldColors(customerSalaryField, isValidSalary);
+});
+
+// check field value is matching to regex
 function isValid(regexPattern, fieldValue) {
     return regexPattern.test(fieldValue);
 }
 
-// Validate Name
-var customerNameField = $('#txtCustomerName');
-var regexName = /^[a-zA-Z\s]*$/;
-
-customerNameField.on('keyup', function () {
-    var customerName = customerNameField.val();
-
-    if (regexName.test(customerName)) {
-        customerNameField.removeClass('border-danger').addClass('border-success');
-        customerNameField.css('border-width', '2px');
+// text field border color change
+function changeTextFieldColors(field,condition) {
+    if (condition) {
+        field.removeClass('border-danger').addClass('border-success');
+        field.css('border-width', '2px');
     } else {
-        customerNameField.removeClass('border-success').addClass('border-danger');
-        customerNameField.css('border-width', '2px');
+        field.removeClass('border-success').addClass('border-danger');
+        field.css('border-width', '2px');
+    }
+}
+
+///////////////////////////////////////////////
+
+// disable tab
+$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").keydown(function (e) {
+    if (e.key === "Tab") {
+        e.preventDefault();
+    }
+});
+
+// press enter to go next text fields (simulate tab)
+$("#txtCustomerID").keydown(function (e){
+    if(e.key === "Enter"){
+        $('#txtCustomerName').focus();
+    }
+});
+
+$("#txtCustomerName").keydown(function (e){
+    if(e.key === "Enter"){
+        $('#txtCustomerAddress').focus();
+    }
+});
+
+$("#txtCustomerAddress").keydown(function (e){
+    if(e.key === "Enter"){
+        $('#txtCustomerSalary').focus();
     }
 });
 
 
-// validate address
-var customerAddressField = $('#txtCustomerAddress');
-var regexAddress = /^[a-zA-Z0-9\s\-,\.]+$/;
-
-customerAddressField.on('keyup', function () {
-    var customerAddress = customerAddressField.val();
-
-    if (regexAddress.test(customerAddress)) {
-        customerAddressField.removeClass('border-danger').addClass('border-success');
-        customerAddressField.css('border-width', '2px');
-    } else {
-        customerAddressField.removeClass('border-success').addClass('border-danger');
-        customerAddressField.css('border-width', '2px');
-    }
-});
-
-
-// validate salary
-var customerSalaryField = $('#txtCustomerSalary');
-var regexSalary = /^(?:[5-9]\d{4}|[1-9]\d{4,})(,\d{3})*(\.\d+)?$/;
-
-customerSalaryField.on('keyup', function () {
-    var customerSalary = customerSalaryField.val();
-
-    if (regexSalary.test(customerSalary)) {
-        customerSalaryField.removeClass('border-danger').addClass('border-success');
-        customerSalaryField.css('border-width', '2px');
-    } else {
-        customerSalaryField.removeClass('border-success').addClass('border-danger');
-        customerSalaryField.css('border-width', '2px');
-    }
-});
