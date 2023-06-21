@@ -24,29 +24,50 @@ let regexName = /^[A-Za-z ]{5,}$/;
 let regexAddress = /^[A-Za-z0-9 ]{8,}$/;
 let regexSalary = /^[0-9]{2,}([.][0-9]{2})?$/;
 
+//error labels
+let invalidIdMessage = $('#invalidIdMessage');
+let invalidNameMessage = $('#invalidNameMessage');
+let invalidAddressMessage = $('#invalidAddressMessage');
+let invalidSalaryMessage = $('#invalidSalaryMessage');
+
+//hide at beginning
+hideErrorMessages()
+
+function hideErrorMessages() {
+    invalidIdMessage.hide();
+    invalidNameMessage.hide();
+    invalidAddressMessage.hide();
+    invalidSalaryMessage.hide();
+}
+
+
 // keyup functions
 // Validate ID
 customerIDField.on('keyup', function () {
     isValidCusID = isValid(regexCusID, customerIDField.val());
     changeTextFieldColors(customerIDField,isValidCusID);
+    displayErrorText(invalidIdMessage,isValidCusID);
 });
 
 // Validate Name
 customerNameField.on('keyup', function () {
     isValidName = isValid(regexName, customerNameField.val());
     changeTextFieldColors(customerNameField,isValidName);
+    displayErrorText(invalidNameMessage,isValidName);
 });
 
 // validate address
 customerAddressField.on('keyup', function () {
     isValidAddress = isValid(regexAddress, customerAddressField.val());
     changeTextFieldColors(customerAddressField, isValidAddress);
+    displayErrorText(invalidAddressMessage,isValidAddress);
 });
 
 // validate salary
 customerSalaryField.on('keyup', function () {
     isValidSalary = isValid(regexSalary, customerSalaryField.val());
     changeTextFieldColors(customerSalaryField, isValidSalary);
+    displayErrorText(invalidSalaryMessage,isValidSalary);
 });
 
 // check field value is matching to regex
@@ -62,6 +83,14 @@ function changeTextFieldColors(field,condition) {
     } else {
         field.removeClass('border-success').addClass('border-danger');
         field.css('border-width', '2px');
+    }
+}
+
+function displayErrorText(messageLabel, condition) {
+    if(condition){
+        messageLabel.hide();
+    }else {
+        messageLabel.show();
     }
 }
 

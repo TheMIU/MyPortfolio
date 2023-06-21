@@ -98,13 +98,21 @@ function getAllCustomers() {
     }
 }
 
-// search
 $('#btnSearchCustomer').click(function () {
     let searchTxt = $("#txtSearchCus").val();
     if (searchTxt !== "") {
         getSearchCustomer(searchTxt);
     } else {
-        alert("Input id to search");
+        alert("Input Data!")
+        getAllCustomers();
+    }
+});
+
+$('#txtSearchCus').on('keyup', function () {
+    let searchTxt = $("#txtSearchCus").val();
+    if (searchTxt !== "") {
+        getSearchCustomer(searchTxt);
+    } else {
         getAllCustomers();
     }
 });
@@ -116,16 +124,14 @@ function getSearchCustomer(searchTxt) {
     tBody.empty();
 
     // Load matching values
+    let found = false;
     for (let i = 0; i < customerDB.length; i++) {
-
-        console.log(searchTxt);
-        console.log(searchTxt.includes(customerDB[i].id));
-
-        if (searchTxt.includes(customerDB[i].id) ||
+        if (
+            searchTxt.includes(customerDB[i].id) ||
             searchTxt.includes(customerDB[i].name) ||
             searchTxt.includes(customerDB[i].address) ||
-            searchTxt.includes(customerDB[i].salary)) {
-
+            searchTxt.includes(customerDB[i].salary)
+        ) {
             let tr = $(`<tr>
                             <td>${customerDB[i].id}</td>
                             <td>${customerDB[i].name}</td>
@@ -133,15 +139,15 @@ function getSearchCustomer(searchTxt) {
                             <td>${customerDB[i].salary}</td>
                         </tr>`);
             tBody.append(tr);
-            break;
-
-        } else {
-            alert("Not found!");
-            getAllCustomers();
-            break;
+            found = true;
         }
     }
+
+    if (!found) {
+        getAllCustomers();
+    }
 }
+
 
 // button cancel , clear fields
 $('#btnCancelCustomer').click(function () {
@@ -155,6 +161,7 @@ function clearAll() {
     $("#txtCustomerSalary").val("");
 
     changeTextFieldColorsToBack([customerIDField, customerNameField, customerAddressField, customerSalaryField]);
+    hideErrorMessages();
 }
 
 function changeTextFieldColorsToBack(fields) {
