@@ -480,9 +480,9 @@
 
 
                     <div class="text-end mt-3">
-                        <button class="btn btn-danger"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+                        <button class="btn btn-danger" id="RemoveSelected"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
                         </button>
-                        <button class="btn btn-primary"><i class="fa-solid fa-plus" style="color: #ffffff;"></i> &nbsp;
+                        <button class="btn btn-primary" id="addToCart"><i class="fa-solid fa-plus" style="color: #ffffff;"></i> &nbsp;
                             Add
                         </button>
                     </div>
@@ -491,7 +491,7 @@
             <!--////////// Table ////////////////-->
             <div class="col-12 bg-body ">
                 <div class="table-responsive mt-2">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="cart">
                         <thead class="table-info">
                         <tr>
                             <th scope="col">Item Code</th>
@@ -502,13 +502,7 @@
                         </tr>
                         </thead>
                         <tbody class="table-group-divider">
-                        <tr>
-                            <td>P002</td>
-                            <td>Keerisamba 5kg</td>
-                            <td>525.00</td>
-                            <td>2</td>
-                            <td>1050.00</td>
-                        </tr>
+
                         </tbody>
                     </table>
                 </div>
