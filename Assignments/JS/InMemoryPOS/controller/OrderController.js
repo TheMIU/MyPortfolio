@@ -71,10 +71,28 @@ selectCodeElement.addEventListener("change", function () {
         $('#OrderItemName').val(selectedItem.itemName);
         $('#OrderItemPrice').val(selectedItem.unitPrice);
         $('#OrderItemQtyOnH').val(selectedItem.qtyOnHand);
+
     } else {
         $('#OrderItemName').val("");
         $('#OrderItemPrice').val("");
         $('#OrderItemQtyOnH').val("");
+    }
+});
+
+///////////////////////////////////////////////
+// Calculate total
+var orderQtyInput = $("#OrderItemQty");
+var totalOfItem = $("#TotalOfItem");
+
+orderQtyInput.on("keyup", function () {
+    var price = parseFloat($('#OrderItemPrice').val());
+    var orderQty = parseFloat(orderQtyInput.val());
+
+    if (!isNaN(price) && !isNaN(orderQty)) {
+        var total = price * orderQty;
+        totalOfItem.val(total.toFixed(2));
+    } else {
+        totalOfItem.val("");
     }
 });
 
