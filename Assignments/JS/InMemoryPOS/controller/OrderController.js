@@ -1,3 +1,40 @@
+//generate the next order ID
+const lastOrderID = getLastOrderID();
+const nextOrderID = generateOrderID(lastOrderID);
+
+$('#GeneratedOrderID').text(nextOrderID);
+
+function getLastOrderID() {
+    return 'O00-001';
+}
+
+function generateOrderID(lastOrderID) {
+    const lastOrderNumber = parseInt(lastOrderID.split('-')[1]);
+    const nextOrderNumber = lastOrderNumber + 1;
+    const paddedOrderNumber = String(nextOrderNumber).padStart(3, '0');
+    const nextOrderID = `O00-${paddedOrderNumber}`;
+    return nextOrderID;
+}
+
+
+// update date with today
+
+// Get the current date
+const currentDate = new Date();
+
+// Format the current date as YYYY/MM/DD
+const formattedDate = formatDate(currentDate);
+
+$('#TodayDate').text(formattedDate);
+
+function formatDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}/${month}/${day}`;
+}
+
+//////////////////////////////
 // load all customer IDs
 loadAllCusIDs();
 
@@ -251,4 +288,63 @@ function updateGrandTotal() {
     // Update the grand total input field
     $('#grandTotal').val(grandTotal.toFixed(2));
     $('#rest').val(rest.toFixed(2));
+}
+
+///////////////////////////////////////////
+// place order
+$('#placeOrder').click(function() {
+    // Retrieve values from input fields
+    let orderID = $('#GeneratedOrderID').text();
+    let date = $('#TodayDate').text();
+    let customerID = $('#selectCusID').val();
+    let discount = parseFloat($('#discount').val());
+    let total = parseFloat($('#total').val());
+
+  // Create the cart array
+    let cart = [];
+    // Iterate over the selected items in the table and add them to the cart
+    $('#cart tbody tr').each(function() {
+        let itemCode = $(this).find('td:first-child').text();
+        let quantity = parseInt($(this).find('td:nth-child(4)').text());
+        let item = itemDB.find(item => item.code === itemCode);
+        if (item) {
+            cart.push({
+                item: item,
+                qty: quantity
+            });
+        }
+    });
+
+    // Find the customer object based on the customerID
+    let customer = customerDB.find(customer => customer.id === customerID);
+
+    // Create the new order object
+    let order = {
+        orderID: orderID,
+        date: date,
+        customer: customer,
+        cart: cart,
+        discount: discount,
+        total: total
+    };
+
+    // Push the order object into the orderDB array
+    orderDB.push(order);
+    //console.log(orderDB);
+
+    loadAllOrders();
+    clearPlaceOrderFields();
+});
+
+function clearPlaceOrderFields() {
+    // Clear the input fields
+    $('#selectCusID').val('');
+    $('#discount').val('');
+    $('#total').val('');
+    $('#cash').val('');
+    $('#grandTotal').val('');
+    // Add any other fields you want to clear
+
+    // Clear the table body
+    $('#cart').find('tbody').empty();
 }

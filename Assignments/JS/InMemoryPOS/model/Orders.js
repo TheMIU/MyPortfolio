@@ -2,5 +2,7 @@ let orders={
     orderID:"",
     date:"",
     customer:customer,
-    cart:[]
+    cart:[],
+    discount:0,
+    total:0
 }

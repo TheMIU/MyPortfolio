@@ -312,25 +312,27 @@
     <!--main content-->
     <section>
         <section class="row p-2" style="height: 100%">
-            <section class="col-lg-8 col-12  bg-body" style="height: 100%">
+            <section class="col-lg-12 col-12  bg-body" style="height: 100%">
                 <!--search Bar-->
-                <div class="input-group row mt-2 mb-1">
+                <!--<div class="input-group row mt-2 mb-1">
                     <div class="col-11">
                         <input class="form-control" type="search">
                     </div>
                     <button class="btn btn-primary col-1" type="button">
                         <i class="fas fa-search"></i>
                     </button>
-                </div>
+                </div>-->
                 <!--table-->
                 <div class="table-responsive ">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="ordersTable">
                         <thead class="table-info">
                         <tr>
                             <th scope="col">Order ID</th>
                             <th scope="col">Date</th>
                             <th scope="col">Customer ID</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">Items ID(s)</th>
+                            <th scope="col">Discount</th>
+                            <th scope="col">Total</th>
                         </tr>
                         </thead>
                         <tbody class="table-group-divider" id="tblOrders">
@@ -341,16 +343,16 @@
             </section>
 
             <!--///////////////////////////////////-->
-            <section class="col-lg-4 col-12 vh-75 bg-body">
+           <!-- <section class="col-lg-4 col-12 vh-75 bg-body">
                 <div class="text-center mt-2 p-1" style="background-color: #0d6efd ; color:white;">
                     <i class="fa-solid fa-border-all" style="color: #ffffff;"></i>
                     Manage Order
                 </div>
                 <div>
-                    <!--<div class="mt-2">
+                    &lt;!&ndash;<div class="mt-2">
                         <button class="btn btn-primary" type="button">Edit</button>
                         <button class="btn btn-primary" type="button">New</button>
-                    </div>-->
+                    </div>&ndash;&gt;
                     <div class="row mt-2 ">
                         <div class="form-group">
                             <label class="col-4 mt-2">OrderID</label>
@@ -385,7 +387,7 @@
                         <button class="btn btn-success" id="btnUpdateOrders" type="button">Update</button>
                     </div>
                 </div>
-            </section>
+            </section>-->
         </section>
     </section>
 </main>
@@ -400,7 +402,7 @@
             <div class="col-lg-3 col-12 bg-body">
                 <div class="container row text-body-tertiary ">
                     <label class="col-6">Order ID: </label>
-                    <label class="col-6" id="GeneratedOrderID">O001</label>
+                    <label class="col-6" id="GeneratedOrderID">O00-001</label>
                     <label class="col-6">Date: </label>
                     <label class="col-6" id="TodayDate">2022/02/02</label>
                 </div>
@@ -416,8 +418,6 @@
                             <option value="1">A</option>
                             <option value="2">B</option>
                         </select>
-                        <span class="control-error"
-                              id="cus-empty-error"></span>
                     </div>
 
                     <div class="form-group">
@@ -510,54 +510,6 @@
                 </div>
             </div>
             <!--///////////////////////////////////-->
-            <!--<div class="col-12 bg-body border border-3">
-                <div class="row justify-content-end">
-
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="row align-items-center">
-                            <label class="col-sm-4 col-12 mt-2">Total</label>
-                            <div class="col-sm-8 col-12">
-                                <input class="form-control mt-2" id="total" readonly>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-12  d-md-flex justify-content-end">
-
-                        <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Discount</label>
-                            <input class=" col-7 mt-2" id="discount">
-                        </div>
-
-                        <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Grand Total</label>
-                            <input class="col-7 mt-2" id="grandTotal" readonly>
-                        </div>
-                    </div>
-
-                    <div class="col-12  d-md-flex justify-content-end">
-                        <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Cash</label>
-                            <input class="col-7 mt-2" id="cash">
-                        </div>
-
-                        <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Rest</label>
-                            <input class="col-7 mt-2" id="rest" readonly>
-                        </div>
-
-                    </div>
-
-
-                    <div>
-                        <button class="btn btn-success m-3">
-                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-                            Place Order
-                        </button>
-                    </div>
-                </div>
-            </div>-->
 
             <div class="col-12 bg-body border border-3">
                 <div class="row justify-content-end">
@@ -613,7 +565,7 @@
 
                 <div class="row justify-content-end">
                     <div class="col-lg-2 col-md-6 col-sm-6">
-                        <button class="btn btn-success m-3">
+                        <button class="btn btn-success m-3" id="placeOrder">
                             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                             Place Order
                         </button>
@@ -643,6 +595,8 @@
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
 <script src="controller/OrderController.js"></script>
+<script src="controller/AllOrdersController.js"></script>
+
 
 
 </body>
