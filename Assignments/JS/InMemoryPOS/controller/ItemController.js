@@ -35,6 +35,7 @@ $("#btnSaveItem").click(function () {
 
         if (!checkExistItem(newItem.code)) {
             itemDB.push(newItem);
+            loadAllItemCodes();
         } else {
             alert("Same Code !");
         }
@@ -68,6 +69,7 @@ $('#btnUpdateItem').click(function () {
                     itemDB[i].qtyOnHand = itemQty;
                     itemDB[i].unitPrice = itemUnitPrice;
 
+                    loadAllItemCodes();
                     // Exit the loop
                     break;
                 }
@@ -176,6 +178,7 @@ $('#btnDeleteItem').click(function () {
                 let b = confirm("Do you want to delete?");
                 if (b) {
                     itemDB.splice(i, 1);
+                    loadAllItemCodes();
                     break; // Exit the loop
                 }
                 break; // Exit the loop

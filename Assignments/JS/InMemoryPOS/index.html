@@ -37,7 +37,8 @@
    ============================================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
@@ -394,13 +395,14 @@
     <!--main content-->
     <section>
         <section class="row p-2" style="height: 100%">
+
             <!--///////////////////////////////////-->
             <div class="col-lg-3 col-12 bg-body">
                 <div class="container row text-body-tertiary ">
                     <label class="col-6">Order ID: </label>
-                    <label class="col-6">O001</label>
+                    <label class="col-6" id="GeneratedOrderID">O001</label>
                     <label class="col-6">Date: </label>
-                    <label class="col-6">2022/02/02</label>
+                    <label class="col-6" id="TodayDate">2022/02/02</label>
                 </div>
 
                 <div class="container text-body-secondary border border-3 p-1">
@@ -408,14 +410,25 @@
                         Customer Details
                     </div>
 
-                    <label class="col-4 mt-2">ID</label>
-                    <input class="form-control col-7 mt-2">
+                    <div class="form-group">
+                        <label>Customer ID</label>
+                        <select class="form-control col-7 mt-2" id="selectCusID">
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                        </select>
+                        <span class="control-error"
+                              id="cus-empty-error"></span>
+                    </div>
 
-                    <label class="col-4 mt-2">Name</label>
-                    <input class="form-control col-7 mt-2">
+                    <div class="form-group">
+                        <label class="col-4 mt-2">Name</label>
+                        <input class="form-control col-7 mt-2" id="OrderCusName" readonly>
+                    </div>
 
-                    <label class="col-4 mt-2">Address</label>
-                    <input class="form-control col-7 mt-2">
+                    <div class="form-group">
+                        <label class="col-4 mt-2">Address</label>
+                        <input class="form-control col-7 mt-2" id="OrderCusAddress" readonly>
+                    </div>
 
                 </div>
             </div>
@@ -428,25 +441,40 @@
 
                     <div class="row">
                         <div class="col-md-6 col-12">
-                            <label class="col-4 mt-2">Code</label>
-                            <input class="form-control col-7 mt-2">
+                            <div class="form-group">
+                                <label class="col-4 mt-2">Code</label>
+                                <select class="form-control col-7 mt-2" id="selectCode">
+                                    <option value="1">A</option>
+                                    <option value="2">B</option>
+                                </select>
+                            </div>
 
-                            <label class="col-4 mt-2">Name</label>
-                            <input class="form-control col-7 mt-2">
+                            <div class="form-group">
+                                <label class="col-4 mt-2">Name</label>
+                                <input class="form-control col-7 mt-2" id="OrderItemName" readonly>
+                            </div>
 
-                            <label class="col-4 mt-2">Qty On H.</label>
-                            <input class="form-control col-7 mt-2">
+                            <div class="form-group">
+                                <label class="col-4 mt-2">Qty On H.</label>
+                                <input class="form-control col-7 mt-2" id="OrderItemQtyOnH" readonly>
+                            </div>
                         </div>
 
                         <div class="col-md-6 col-12">
-                            <label class="col-4 mt-2">Price</label>
-                            <input class="form-control col-7 mt-2">
+                            <div class="form-group">
+                                <label class="col-4 mt-2">Price</label>
+                                <input class="form-control col-7 mt-2" id="OrderItemPrice" readonly>
+                            </div>
 
-                            <label class="col-4 mt-2">Order Qty</label>
-                            <input class="form-control col-7 mt-2">
+                            <div class="form-group">
+                                <label class="col-4 mt-2">Order Qty</label>
+                                <input class="form-control col-7 mt-2" id="OrderItemQty">
+                            </div>
 
-                            <label class="col-4 mt-2">Total</label>
-                            <input class="form-control col-7 mt-2">
+                            <div class="form-group">
+                                <label class="col-4 mt-2">Total</label>
+                                <input class="form-control col-7 mt-2" readonly>
+                            </div>
                         </div>
                     </div>
 
@@ -460,7 +488,7 @@
                     </div>
                 </div>
             </div>
-            <!--///////////////////////////////////-->
+            <!--////////// Table ////////////////-->
             <div class="col-12 bg-body ">
                 <div class="table-responsive mt-2">
                     <table class="table table-hover">

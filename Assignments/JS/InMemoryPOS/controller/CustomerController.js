@@ -35,6 +35,7 @@ $("#btnSaveCustomer").click(function () {
 
         if (!checkExistCustomer(newCustomer.id)) {
             customerDB.push(newCustomer);
+            loadAllCusIDs();
         } else {
             alert("Same ID !");
         }
@@ -68,6 +69,7 @@ $('#btnUpdateCustomer').click(function () {
                     customerDB[i].address = address;
                     customerDB[i].salary = salary;
 
+                    loadAllCusIDs();
                     // Exit the loop
                     break;
                 }
@@ -176,6 +178,7 @@ $('#btnDeleteCustomer').click(function () {
                 let b = confirm("Do you want to delete?");
                 if (b) {
                     customerDB.splice(i, 1);
+                    loadAllCusIDs();
                     break; // Exit the loop
                 }
                 break; // Exit the loop
