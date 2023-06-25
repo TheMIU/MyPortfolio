@@ -480,9 +480,11 @@
 
 
                     <div class="text-end mt-3">
-                        <button class="btn btn-danger" id="RemoveSelected"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+                        <button class="btn btn-danger" id="RemoveSelected"><i class="fa-solid fa-xmark"
+                                                                              style="color: #ffffff;"></i>
                         </button>
-                        <button class="btn btn-primary" id="addToCart"><i class="fa-solid fa-plus" style="color: #ffffff;"></i> &nbsp;
+                        <button class="btn btn-primary" id="addToCart"><i class="fa-solid fa-plus"
+                                                                          style="color: #ffffff;"></i> &nbsp;
                             Add
                         </button>
                     </div>
@@ -508,30 +510,45 @@
                 </div>
             </div>
             <!--///////////////////////////////////-->
-            <div class="col-12 bg-body border border-3 ">
-                <div class="row text-end">
-                    <div class="col-12 d-md-flex justify-content-end">
-                        <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Total</label>
-                            <input class="col-7 mt-2">
-                        </div>
-                    </div>
-                    <div class="col-12  d-md-flex justify-content-end">
-                        <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Discount</label>
-                            <input class=" col-7 mt-2">
+            <!--<div class="col-12 bg-body border border-3">
+                <div class="row justify-content-end">
+
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="row align-items-center">
+                            <label class="col-sm-4 col-12 mt-2">Total</label>
+                            <div class="col-sm-8 col-12">
+                                <input class="form-control mt-2" id="total" readonly>
+                            </div>
                         </div>
 
+                    </div>
+
+                    <div class="col-12  d-md-flex justify-content-end">
+
                         <div class="row w-lg-25 ">
-                            <label class="col-4 mt-2">Cash</label>
-                            <input class="col-7 mt-2">
+                            <label class="col-4 mt-2">Discount</label>
+                            <input class=" col-7 mt-2" id="discount">
                         </div>
 
                         <div class="row w-lg-25 ">
                             <label class="col-4 mt-2">Grand Total</label>
-                            <input class="col-7 mt-2">
+                            <input class="col-7 mt-2" id="grandTotal" readonly>
                         </div>
                     </div>
+
+                    <div class="col-12  d-md-flex justify-content-end">
+                        <div class="row w-lg-25 ">
+                            <label class="col-4 mt-2">Cash</label>
+                            <input class="col-7 mt-2" id="cash">
+                        </div>
+
+                        <div class="row w-lg-25 ">
+                            <label class="col-4 mt-2">Rest</label>
+                            <input class="col-7 mt-2" id="rest" readonly>
+                        </div>
+
+                    </div>
+
 
                     <div>
                         <button class="btn btn-success m-3">
@@ -540,7 +557,70 @@
                         </button>
                     </div>
                 </div>
+            </div>-->
+
+            <div class="col-12 bg-body border border-3">
+                <div class="row justify-content-end">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="row align-items-center">
+                            <label class="col-sm-4 col-12 mt-2">Total</label>
+                            <div class="col-sm-8 col-12">
+                                <input class="form-control mt-2" id="total" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="row">
+                            <div class="col-4 mt-2">Discount</div>
+                            <div class="col-7">
+                                <input class="form-control mt-2" id="discount">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="row">
+                            <div class="col-4 mt-2">Grand Total</div>
+                            <div class="col-7">
+                                <input class="form-control mt-2" id="grandTotal" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="row">
+                            <div class="col-4 mt-2">Cash</div>
+                            <div class="col-7">
+                                <input class="form-control mt-2" id="cash">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="row">
+                            <div class="col-4 mt-2">Rest</div>
+                            <div class="col-7">
+                                <input class="form-control mt-2" id="rest" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <button class="btn btn-success m-3">
+                            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                            Place Order
+                        </button>
+                    </div>
+                </div>
             </div>
+
         </section>
     </section>
 </main>

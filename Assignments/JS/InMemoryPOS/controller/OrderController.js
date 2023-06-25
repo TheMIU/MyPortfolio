@@ -169,6 +169,9 @@ function displayCartItems() {
 
         cartTable.find('tbody').append(row);
     });
+
+    calculateTotal();
+    updateGrandTotal();
 }
 
 // load selected row to fields
@@ -187,7 +190,7 @@ $('#cart tbody').on('click', 'tr', function () {
 });
 
 // Row selection
-$('#cart tbody').on('click', 'tr', function() {
+$('#cart tbody').on('click', 'tr', function () {
     $(this).toggleClass('selected');
 });
 
@@ -205,5 +208,47 @@ $('#RemoveSelected').click(function () {
 
         // Remove the corresponding item from the cart array
         cart.splice(selectedRowIndex, 1);
+        calculateTotal();
+        updateGrandTotal();
     }
 });
+
+// get total
+calculateTotal();
+
+function calculateTotal() {
+    var tot = 0;
+
+    // Iterate over each row in the table
+    $('#cart tbody tr').each(function () {
+        // Get the value of the "Total" column in the current row
+        let rowTotal = parseFloat($(this).find('td:eq(4)').text());
+
+        // Add the row total to the overall total
+        tot += rowTotal;
+    });
+
+    // Update the total input field with the calculated total
+    $('#total').val(tot.toFixed(2));
+}
+
+// grand total
+// Keyup event handlers for cash and discount inputs
+$('#cash, #discount').on('keyup', function () {
+    updateGrandTotal();
+});
+
+function updateGrandTotal() {
+    // Get the values of cash, total, and discount
+    let cash = parseFloat($('#cash').val()) || 0;
+    let total = parseFloat($('#total').val()) || 0;
+    let discount = parseFloat($('#discount').val()) || 0;
+
+    // Calculate the grand total
+    let grandTotal = total - total * (discount / 100);
+    let rest = cash - grandTotal;
+
+    // Update the grand total input field
+    $('#grandTotal').val(grandTotal.toFixed(2));
+    $('#rest').val(rest.toFixed(2));
+}
