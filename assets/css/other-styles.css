@@ -1,13 +1,48 @@
-#other > section:nth-child(2) {
+#other > :nth-child(2) {
     display: flex;
     justify-content: center;
-height: 90%
+    height: 100vh;
 }
 
-#other > section:nth-child(2) img {
+#other > :nth-child(2) img {
     width: 80%;
     align-self: center;
 }
+
+.slider {
+    position: relative;
+}
+
+.slider-img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slider-img.active {
+    opacity: 1;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 40px;
+}
+
+.next-btn {
+    right: 40px;
+}
+
 
 /* Grayscale images hover
 ============================================ */
@@ -93,13 +128,13 @@ height: 90%
 
 /*assignments
 ============================================ */
-#assignments{
+#assignments {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-#assignments section{
+#assignments section {
     margin: 30px;
     background: #E7F0ED;
     height: 50px;
@@ -108,7 +143,7 @@ height: 90%
     justify-content: center;
 }
 
-#assignments p, #assignments a{
+#assignments p, #assignments a {
     margin: 0;
     align-self: center;
 }
