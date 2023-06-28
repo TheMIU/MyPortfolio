@@ -1,4 +1,4 @@
-<h3>Technology & Frameworks</h3>
+<h3>Technologies & Frameworks</h3>
 
 <ul>
   <li>HTML</li>
@@ -27,7 +27,7 @@ GitHub Pages : https://themiu.github.io/MyPortfolio/ <br>
 Desktop View | Tablet View | Mobile View
 ![](responsive.jpg)
 
-<h3> Web POS Using CSS FrameWorks</h3>
+<h3> Web POS Using CSS Frameworks</h3>
 
 Sitemap & wireframe🔗
 https://drive.google.com/file/d/1eWEmaahjJgHWX5uiR81lzvBYDUFOnlwf/view?usp=sharing
