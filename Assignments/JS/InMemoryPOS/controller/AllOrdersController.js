@@ -4,13 +4,13 @@ loadAllOrders();
 function loadAllOrders() {
     let tblOrdersBody = $('#tblOrders');
 
-// Clear the table body
+    // Clear the table body
     tblOrdersBody.empty();
 
-// Iterate over the orderDB array and add rows to the table
+    // Iterate over the orderDB array and add rows to the table
     orderDB.forEach(function (order) {
         let items = order.cart.map(function (cartItem) {
-            return cartItem.item.code;
+            return cartItem.item.code + ' ( qty:' + cartItem.qty+' )';
         }).join(', ');
 
         let row = '<tr>' +
@@ -24,5 +24,4 @@ function loadAllOrders() {
 
         tblOrdersBody.append(row);
     });
-
 }
