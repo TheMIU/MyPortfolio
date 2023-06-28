@@ -1,18 +1,24 @@
+
 //generate the next order ID
 const lastOrderID = getLastOrderID();
-const nextOrderID = generateOrderID(lastOrderID);
+generateOrderID(lastOrderID);
 
-$('#GeneratedOrderID').text(nextOrderID);
 
 function getLastOrderID() {
-    return 'O00-001';
+    if (orderDB.length > 0) {
+        return orderDB[orderDB.length - 1].orderID;
+    } else {
+        return 'O00-001'; // Return if the orderDB is empty
+    }
 }
+
 
 function generateOrderID(lastOrderID) {
     const lastOrderNumber = parseInt(lastOrderID.split('-')[1]);
     const nextOrderNumber = lastOrderNumber + 1;
     const paddedOrderNumber = String(nextOrderNumber).padStart(3, '0');
     const nextOrderID = `O00-${paddedOrderNumber}`;
+    $('#GeneratedOrderID').text(nextOrderID);
     return nextOrderID;
 }
 
@@ -55,6 +61,9 @@ function loadAllCusIDs() {
         optionElement.textContent = customer.id;
         selectCusElement.appendChild(optionElement);
     });
+
+    $('#selectCusID').val('');
+
 }
 
 // Add event listener to the select element
@@ -95,6 +104,9 @@ function loadAllItemCodes() {
         optionElement.textContent = item.code;
         selectCodeElement.appendChild(optionElement);
     });
+
+    $('#selectCode').val('');
+
 }
 
 // Add event listener to the select element
@@ -273,6 +285,7 @@ function calculateTotal() {
 // Keyup event handlers for cash and discount inputs
 $('#cash, #discount').on('keyup', function () {
     updateGrandTotal();
+    checkCashValidity();
 });
 
 function updateGrandTotal() {
@@ -293,6 +306,15 @@ function updateGrandTotal() {
 ///////////////////////////////////////////
 // place order
 $('#placeOrder').click(function() {
+    if(checkIsValidOrder()){
+        placeOrder();
+        changeTextFieldColorsToBack( [$('#cash'),$('#OrderItemQty')]);
+    }else{
+        alert("Invalid Order!");
+    }
+});
+
+function placeOrder(){
     // Retrieve values from input fields
     let orderID = $('#GeneratedOrderID').text();
     let date = $('#TodayDate').text();
@@ -300,15 +322,15 @@ $('#placeOrder').click(function() {
     let discount = parseFloat($('#discount').val());
     let total = parseFloat($('#total').val());
 
-  // Create the cart array
-    let cart = [];
+    // Create the cart array
+    let cart2 = [];
     // Iterate over the selected items in the table and add them to the cart
     $('#cart tbody tr').each(function() {
         let itemCode = $(this).find('td:first-child').text();
         let quantity = parseInt($(this).find('td:nth-child(4)').text());
         let item = itemDB.find(item => item.code === itemCode);
         if (item) {
-            cart.push({
+            cart2.push({
                 item: item,
                 qty: quantity
             });
@@ -323,7 +345,7 @@ $('#placeOrder').click(function() {
         orderID: orderID,
         date: date,
         customer: customer,
-        cart: cart,
+        cart: cart2,
         discount: discount,
         total: total
     };
@@ -332,19 +354,37 @@ $('#placeOrder').click(function() {
     orderDB.push(order);
     //console.log(orderDB);
 
+    alert("Order successfully placed!")
+
     loadAllOrders();
     clearPlaceOrderFields();
-});
+
+    // empty cart
+    cart2 = [];
+    cart =[];
+}
 
 function clearPlaceOrderFields() {
-    // Clear the input fields
+    // Clear the input fields.
     $('#selectCusID').val('');
+    $('#OrderCusName').val('');
+    $('#OrderCusAddress').val('');
+
+    $('#selectCode').val('');
+    $('#OrderItemName').val('');
+    $('#OrderItemQtyOnH').val('');
+    $('#OrderItemPrice').val('');
+    $('#OrderItemQty').val('');
+    $('#TotalOfItem').val('');
+
     $('#discount').val('');
     $('#total').val('');
     $('#cash').val('');
     $('#grandTotal').val('');
-    // Add any other fields you want to clear
+    $('#rest').val('');
 
     // Clear the table body
     $('#cart').find('tbody').empty();
+
+    generateOrderID(getLastOrderID());
 }

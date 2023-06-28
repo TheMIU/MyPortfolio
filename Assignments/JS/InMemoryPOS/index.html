@@ -69,7 +69,7 @@
                         <a class="nav-link" onclick="mngOrder()">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="placeOrder()">Place Order</a>
+                        <a class="nav-link" onclick="placeOrderForm()">Place Order</a>
                     </li>
                 </ul>
 
@@ -134,7 +134,7 @@
             <i class="fa-solid fa-border-all" style="color: #ffffff;"></i> <br>
             Manage <br> Orders
         </button>
-        <button class="col btn btn-primary text-light " onclick="placeOrder()">
+        <button class="col btn btn-primary text-light " onclick="placeOrderForm()">
             <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
             <br>Place Order
         </button>
@@ -468,7 +468,7 @@
 
                             <div class="form-group">
                                 <label class="col-4 mt-2">Order Qty</label>
-                                <input class="form-control col-7 mt-2" id="OrderItemQty">
+                                <input class="form-control col-7 mt-2" id="OrderItemQty" type="number">
                             </div>
 
                             <div class="form-group">
@@ -528,7 +528,7 @@
                         <div class="row">
                             <div class="col-4 mt-2">Discount</div>
                             <div class="col-7">
-                                <input class="form-control mt-2" id="discount">
+                                <input class="form-control mt-2" id="discount" type="number">
                             </div>
                         </div>
                     </div>
@@ -548,7 +548,7 @@
                         <div class="row">
                             <div class="col-4 mt-2">Cash</div>
                             <div class="col-7">
-                                <input class="form-control mt-2" id="cash">
+                                <input class="form-control mt-2" id="cash" type="number">
                             </div>
                         </div>
                     </div>

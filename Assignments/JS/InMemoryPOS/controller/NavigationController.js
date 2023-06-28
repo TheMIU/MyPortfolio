@@ -35,7 +35,7 @@ function logoutBtn() {
     place_order.style.display = 'none';
 }
 
-function placeOrder() {
+function placeOrderForm() {
     place_order.style.display = 'block';
 
     home.style.display = 'none';
