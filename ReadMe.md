@@ -22,6 +22,8 @@ https://www.figma.com/file/hAiPGJkGndXCVvJ6fHRwz4/Mockup?node-id=0%3A1&t=EFYaVEl
 InfinityFree : http://kasunmiuranga.epizy.com <br>
 GitHub Pages : https://themiu.github.io/MyPortfolio/ <br>
 
+<br>
+ 
 Desktop View | Tablet View | Mobile View
 ![](responsive.jpg)
 
