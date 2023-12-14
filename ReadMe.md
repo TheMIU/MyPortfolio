@@ -4,7 +4,6 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>JS</li>
-  <li>Jquery</li>
 </ul>
 <h3>References</h3>
 
@@ -26,7 +25,7 @@ GitHub Pages : https://themiu.github.io/MyPortfolio/ <br>
 Desktop View | Tablet View | Mobile View
 ![](responsive.jpg)
 
-<h3> Web POS Using CSS Frameworks (Bootstrap)</h3>
+<h3> Web POS Using CSS Frameworks (Bootstrap, Jquery)</h3>
 
 Sitemap & wireframe🔗
 https://drive.google.com/file/d/1eWEmaahjJgHWX5uiR81lzvBYDUFOnlwf/view?usp=sharing
